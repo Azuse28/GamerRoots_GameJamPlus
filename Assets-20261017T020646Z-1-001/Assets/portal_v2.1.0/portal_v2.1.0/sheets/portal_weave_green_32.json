@@ -1,0 +1,27 @@
+{
+  "pack_id": "portal",
+  "display_name": "Portal",
+  "version": "2.1.0",
+  "image": "portal_weave_green_32.png",
+  "cell": {
+    "width": 32,
+    "height": 32
+  },
+  "columns": 16,
+  "rows": 1,
+  "anchor": "center",
+  "perspective": "effect",
+  "clips": [
+    {
+      "name": "weave_green_32",
+      "animation": "weave_green_32",
+      "direction": "fx",
+      "row": 0,
+      "from": 0,
+      "to": 15,
+      "frames": 16,
+      "fps": 12,
+      "loop": true
+    }
+  ]
+}
