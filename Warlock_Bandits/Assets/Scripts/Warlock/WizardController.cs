@@ -3,36 +3,41 @@ using UnityEngine.InputSystem;
 
 public class WizardController : MonoBehaviour
 {
+    [SerializeField] private float velocidad = 8f;
 
-    public float velocidad = 5f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Rigidbody2D rb;
+    private float movimientoX;
+
+    void Awake()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float velocidadX = 0f;
+        movimientoX = 0f;
+
+        if (Keyboard.current == null)
+            return;
 
         if (Keyboard.current.aKey.isPressed)
         {
-            velocidadX = -velocidad;
+            movimientoX = -1f;
+            Debug.Log("Presionando A");
         }
 
         if (Keyboard.current.dKey.isPressed)
         {
-            velocidadX = velocidad;
+            movimientoX = 1f;
+            Debug.Log("Presionando D");
         }
+    }
 
-        Vector3 posicion = transform.position;
-
-        transform.position = new Vector3(
-            posicion.x + velocidadX * Time.deltaTime,
-            posicion.y,
-            posicion.z
+    void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector2(
+            movimientoX * velocidad,
+            rb.linearVelocity.y
         );
-
     }
 }
