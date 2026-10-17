@@ -1,8 +1,7 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// La caja reacciona distinto según el personaje que la toca:
-// uno la puede empujar (manteniendo una tecla) y al otro lo mata
 [RequireComponent(typeof(Rigidbody2D))]
 public class Caja : MonoBehaviour
 {
@@ -10,8 +9,10 @@ public class Caja : MonoBehaviour
     public TipoPersonaje quienMuere = TipoPersonaje.Warlock;
     public Key teclaEmpujar = Key.X;
 
+    [SerializeField] private float velocidadCaja = 8f;
+
     private Rigidbody2D rb;
-    private int empujadoresTocando = 0;
+    private Personaje banditTocando;
 
     void Awake()
     {
@@ -20,13 +21,42 @@ public class Caja : MonoBehaviour
         Bloquear();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        bool teclaPulsada = Keyboard.current != null && Keyboard.current[teclaEmpujar].isPressed;
+        if (Keyboard.current == null)
+        {
+            Bloquear();
+            return;
+        }
 
-        if (empujadoresTocando > 0 && teclaPulsada)
+        bool teclaPulsada =
+            Keyboard.current[teclaEmpujar].isPressed;
+
+        bool puedeMover =
+            banditTocando != null && teclaPulsada;
+
+        float movimientoX = 0f;
+
+        if (puedeMover)
+        {
+            if (Keyboard.current.aKey.isPressed)
+                movimientoX = -1f;
+
+            if (Keyboard.current.dKey.isPressed)
+                movimientoX = 1f;
+        }
+
+        if (puedeMover && movimientoX != 0f)
         {
             Desbloquear();
+
+            rb.MovePosition(
+                rb.position + new Vector2(
+                    movimientoX * velocidadCaja *
+                    Time.fixedDeltaTime,
+                    0f
+                )
+            );
         }
         else
         {
@@ -36,42 +66,65 @@ public class Caja : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D colision)
     {
-        Personaje personaje = colision.collider.GetComponentInParent<Personaje>();
-        if (personaje == null)
-        {
-            return;
-        }
+        DetectarBandit(colision);
+    }
 
-        if (personaje.tipo == quienMuere)
+    void OnCollisionStay2D(Collision2D colision)
+    {
+        DetectarBandit(colision);
+    }
+
+    void DetectarBandit(Collision2D colision)
+    {
+        Personaje personaje =
+            colision.collider.GetComponentInParent<Personaje>();
+
+        if (personaje == null)
+            return;
+
+        if (personaje.tipo == quienEmpuja)
         {
-            personaje.Morir();
-        }
-        else if (personaje.tipo == quienEmpuja)
-        {
-            empujadoresTocando++;
+            banditTocando = personaje;
         }
     }
 
     void OnCollisionExit2D(Collision2D colision)
     {
-        Personaje personaje = colision.collider.GetComponentInParent<Personaje>();
-        if (personaje == null || personaje.tipo != quienEmpuja)
-        {
-            return;
-        }
+        Personaje personaje =
+            colision.collider.GetComponentInParent<Personaje>();
 
-        empujadoresTocando = Mathf.Max(0, empujadoresTocando - 1);
+        if (personaje == banditTocando)
+        {
+            banditTocando = null;
+        }
     }
 
-    // Quieta en X para que nadie mas la mueva; la gravedad sigue actuando en Y
     void Bloquear()
     {
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        if (rb.bodyType != RigidbodyType2D.Dynamic)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+
+        rb.constraints =
+            RigidbodyConstraints2D.FreezePositionX |
+            RigidbodyConstraints2D.FreezeRotation;
+
+        rb.linearVelocity = new Vector2(
+            0f,
+            rb.linearVelocity.y
+        );
     }
 
     void Desbloquear()
     {
+        rb.bodyType = RigidbodyType2D.Kinematic;
+
+        rb.useFullKinematicContacts = true;
+
+        // Importante: liberar X para permitir MovePosition
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        rb.linearVelocity = Vector2.zero;
     }
 }

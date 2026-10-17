@@ -7,6 +7,8 @@ TagManager:
   - Image
   - Suelo
   - BadWater
+  - Ground
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - BackGround
   - Ground
   - BadWater
-  - 
+  - Player
   - 
   - 
   - 

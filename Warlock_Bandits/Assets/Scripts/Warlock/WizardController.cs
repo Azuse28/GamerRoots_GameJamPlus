@@ -1,12 +1,16 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class WizardController : MonoBehaviour
 {
     [SerializeField] private float velocidad = 8f;
+    [SerializeField] private float fuerzaSalto = 12f;
 
     private Rigidbody2D rb;
     private float movimientoX;
+    private bool saltar;
+    private bool enSuelo = false;
 
     void Awake()
     {
@@ -23,13 +27,17 @@ public class WizardController : MonoBehaviour
         if (Keyboard.current.jKey.isPressed)
         {
             movimientoX = -1f;
-            Debug.Log("Presionando J");
         }
 
         if (Keyboard.current.lKey.isPressed)
         {
             movimientoX = 1f;
-            Debug.Log("Presionando L");
+        }
+
+        if (Keyboard.current.iKey.wasPressedThisFrame && enSuelo)
+        {
+            saltar = true;
+            enSuelo = false;
         }
     }
 
@@ -39,5 +47,31 @@ public class WizardController : MonoBehaviour
             movimientoX * velocidad,
             rb.linearVelocity.y
         );
+
+        if (saltar)
+        {
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                fuerzaSalto
+            );
+
+            saltar = false;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            enSuelo = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            enSuelo = false;
+        }
     }
 }
