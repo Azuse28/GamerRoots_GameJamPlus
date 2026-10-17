@@ -20,16 +20,16 @@ public class WizardController : MonoBehaviour
         if (Keyboard.current == null)
             return;
 
-        if (Keyboard.current.aKey.isPressed)
+        if (Keyboard.current.jKey.isPressed)
         {
             movimientoX = -1f;
-            Debug.Log("Presionando A");
+            Debug.Log("Presionando J");
         }
 
-        if (Keyboard.current.dKey.isPressed)
+        if (Keyboard.current.lKey.isPressed)
         {
             movimientoX = 1f;
-            Debug.Log("Presionando D");
+            Debug.Log("Presionando L");
         }
     }
 
