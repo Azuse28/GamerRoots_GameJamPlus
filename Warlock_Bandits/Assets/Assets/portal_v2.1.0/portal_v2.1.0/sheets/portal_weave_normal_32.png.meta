@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 56a00cf649225c94098635184969467b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5702901605020298890
+    second: portal_weave_normal_32_0
+  - first:
+      213: -2686732760434337838
+    second: portal_weave_normal_32_1
+  - first:
+      213: 6331367909894917551
+    second: portal_weave_normal_32_2
+  - first:
+      213: 1303215072566047201
+    second: portal_weave_normal_32_3
+  - first:
+      213: 4226090964997016274
+    second: portal_weave_normal_32_4
+  - first:
+      213: 6398499508440969324
+    second: portal_weave_normal_32_5
+  - first:
+      213: -7904745094194216318
+    second: portal_weave_normal_32_6
+  - first:
+      213: 868779400539362152
+    second: portal_weave_normal_32_7
+  - first:
+      213: 5862947634122280095
+    second: portal_weave_normal_32_8
+  - first:
+      213: -1046171947656093967
+    second: portal_weave_normal_32_9
+  - first:
+      213: 3824920717584819834
+    second: portal_weave_normal_32_10
+  - first:
+      213: -269279585647092827
+    second: portal_weave_normal_32_11
+  - first:
+      213: -8981172695331277075
+    second: portal_weave_normal_32_12
+  - first:
+      213: -2140633117723695699
+    second: portal_weave_normal_32_13
+  - first:
+      213: 7628328094476119480
+    second: portal_weave_normal_32_14
+  - first:
+      213: -999878903306701572
+    second: portal_weave_normal_32_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: portal_weave_normal_32_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 4
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8e6d346bc6c42f40800000000000000
+      internalID: 5702901605020298890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d718ef0acec6bad0800000000000000
+      internalID: -2686732760434337838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_2
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad089ba1998dd750800000000000000
+      internalID: 6331367909894917551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e1fb3a2433f51210800000000000000
+      internalID: 1303215072566047201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 4
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da8225875716aa30800000000000000
+      internalID: 4226090964997016274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 4
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60b228f6690cc850800000000000000
+      internalID: 6398499508440969324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 4
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282ca8cc734bc4290800000000000000
+      internalID: -7904745094194216318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_7
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863535503468e0c00800000000000000
+      internalID: 868779400539362152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_8
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c439c5fcf5d5150800000000000000
+      internalID: 5862947634122280095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_9
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fedafd08204b71f0800000000000000
+      internalID: -1046171947656093967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_10
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76eca99029d41530800000000000000
+      internalID: 3824920717584819834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_11
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab9d30c4a3534cf0800000000000000
+      internalID: -269279585647092827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_12
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 5
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6775494077c5380800000000000000
+      internalID: -8981172695331277075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_13
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 5
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da564af5581fa42e0800000000000000
+      internalID: -2140633117723695699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_14
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 4
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bda16d3cf34dd960800000000000000
+      internalID: 7628328094476119480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_weave_normal_32_15
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 4
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf43ffd5f67bf12f0800000000000000
+      internalID: -999878903306701572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      portal_weave_normal_32_0: 5702901605020298890
+      portal_weave_normal_32_1: -2686732760434337838
+      portal_weave_normal_32_10: 3824920717584819834
+      portal_weave_normal_32_11: -269279585647092827
+      portal_weave_normal_32_12: -8981172695331277075
+      portal_weave_normal_32_13: -2140633117723695699
+      portal_weave_normal_32_14: 7628328094476119480
+      portal_weave_normal_32_15: -999878903306701572
+      portal_weave_normal_32_2: 6331367909894917551
+      portal_weave_normal_32_3: 1303215072566047201
+      portal_weave_normal_32_4: 4226090964997016274
+      portal_weave_normal_32_5: 6398499508440969324
+      portal_weave_normal_32_6: -7904745094194216318
+      portal_weave_normal_32_7: 868779400539362152
+      portal_weave_normal_32_8: 5862947634122280095
+      portal_weave_normal_32_9: -1046171947656093967
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

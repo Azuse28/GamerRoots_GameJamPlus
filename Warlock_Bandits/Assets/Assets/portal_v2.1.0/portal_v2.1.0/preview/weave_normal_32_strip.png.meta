@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 44c547df02ca119448563bcddfde3e9e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3738746204423502661
+    second: weave_normal_32_strip_0
+  - first:
+      213: -8995094717479296041
+    second: weave_normal_32_strip_1
+  - first:
+      213: 8605098157737486741
+    second: weave_normal_32_strip_2
+  - first:
+      213: 3257570522440773950
+    second: weave_normal_32_strip_3
+  - first:
+      213: -1005510715009354299
+    second: weave_normal_32_strip_4
+  - first:
+      213: 7974994855368612050
+    second: weave_normal_32_strip_5
+  - first:
+      213: 774679149132898923
+    second: weave_normal_32_strip_6
+  - first:
+      213: 338155695926599829
+    second: weave_normal_32_strip_7
+  - first:
+      213: -1536953141975177072
+    second: weave_normal_32_strip_8
+  - first:
+      213: 7063692077821577901
+    second: weave_normal_32_strip_9
+  - first:
+      213: 4559348299091673876
+    second: weave_normal_32_strip_10
+  - first:
+      213: 2918903227003558515
+    second: weave_normal_32_strip_11
+  - first:
+      213: -9037086637070450889
+    second: weave_normal_32_strip_12
+  - first:
+      213: 83925910906969392
+    second: weave_normal_32_strip_13
+  - first:
+      213: 3802415905617601273
+    second: weave_normal_32_strip_14
+  - first:
+      213: -7312347867446295351
+    second: weave_normal_32_strip_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: weave_normal_32_strip_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 19
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54bb00c3dd1b2e330800000000000000
+      internalID: 3738746204423502661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 23
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d367a333010b2380800000000000000
+      internalID: -8995094717479296041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_2
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 23
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599af45ce237b6770800000000000000
+      internalID: 8605098157737486741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 23
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31bddc7127353d20800000000000000
+      internalID: 3257570522440773950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_4
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 19
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5b4060555bb02f0800000000000000
+      internalID: -1005510715009354299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 19
+        width: 74
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d850df419fdcae60800000000000000
+      internalID: 7974994855368612050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_6
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 19
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62e7fae49630ca00800000000000000
+      internalID: 774679149132898923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_7
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 23
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 590ea7650de51b400800000000000000
+      internalID: 338155695926599829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_8
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 23
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0982620b245abaae0800000000000000
+      internalID: -1536953141975177072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_9
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 23
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daacb4d0586470260800000000000000
+      internalID: 7063692077821577901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_10
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41304ae1f1f064f30800000000000000
+      internalID: 4559348299091673876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_11
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ad94b1507028820800000000000000
+      internalID: 2918903227003558515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_12
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 23
+        width: 86
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f7cf88591d59280800000000000000
+      internalID: -9037086637070450889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_13
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 23
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d9f0bdb2a2a2100800000000000000
+      internalID: 83925910906969392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_14
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 19
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2e1aebe15e4c430800000000000000
+      internalID: 3802415905617601273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weave_normal_32_strip_15
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 19
+        width: 74
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c447c66b52558a90800000000000000
+      internalID: -7312347867446295351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      weave_normal_32_strip_0: 3738746204423502661
+      weave_normal_32_strip_1: -8995094717479296041
+      weave_normal_32_strip_10: 4559348299091673876
+      weave_normal_32_strip_11: 2918903227003558515
+      weave_normal_32_strip_12: -9037086637070450889
+      weave_normal_32_strip_13: 83925910906969392
+      weave_normal_32_strip_14: 3802415905617601273
+      weave_normal_32_strip_15: -7312347867446295351
+      weave_normal_32_strip_2: 8605098157737486741
+      weave_normal_32_strip_3: 3257570522440773950
+      weave_normal_32_strip_4: -1005510715009354299
+      weave_normal_32_strip_5: 7974994855368612050
+      weave_normal_32_strip_6: 774679149132898923
+      weave_normal_32_strip_7: 338155695926599829
+      weave_normal_32_strip_8: -1536953141975177072
+      weave_normal_32_strip_9: 7063692077821577901
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

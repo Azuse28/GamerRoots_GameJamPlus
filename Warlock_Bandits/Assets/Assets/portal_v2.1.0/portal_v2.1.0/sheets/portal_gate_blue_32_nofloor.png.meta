@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 1e5909a97a013db4b945f75151f2edc5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2042531512103171403
+    second: portal_gate_blue_32_nofloor_0
+  - first:
+      213: -3586306605636740416
+    second: portal_gate_blue_32_nofloor_1
+  - first:
+      213: 5073099559292275683
+    second: portal_gate_blue_32_nofloor_2
+  - first:
+      213: 7649190519336736454
+    second: portal_gate_blue_32_nofloor_3
+  - first:
+      213: -4788869809198815441
+    second: portal_gate_blue_32_nofloor_4
+  - first:
+      213: -8224911628274400325
+    second: portal_gate_blue_32_nofloor_5
+  - first:
+      213: 2405211565828353923
+    second: portal_gate_blue_32_nofloor_6
+  - first:
+      213: -1001516415844189115
+    second: portal_gate_blue_32_nofloor_7
+  - first:
+      213: -8426078199076789621
+    second: portal_gate_blue_32_nofloor_8
+  - first:
+      213: 6517004775108368061
+    second: portal_gate_blue_32_nofloor_9
+  - first:
+      213: 1460910588181614331
+    second: portal_gate_blue_32_nofloor_10
+  - first:
+      213: 4131840787921657668
+    second: portal_gate_blue_32_nofloor_11
+  - first:
+      213: 8547507875075697393
+    second: portal_gate_blue_32_nofloor_12
+  - first:
+      213: -6330459150133249488
+    second: portal_gate_blue_32_nofloor_13
+  - first:
+      213: -8267058834506130052
+    second: portal_gate_blue_32_nofloor_14
+  - first:
+      213: 4055052769068974102
+    second: portal_gate_blue_32_nofloor_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba8c8a596877a3e0800000000000000
+      internalID: -2042531512103171403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca926ba421ea3ec0800000000000000
+      internalID: -3586306605636740416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb8ec5bb25476640800000000000000
+      internalID: 5073099559292275683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c61a5c0042672a60800000000000000
+      internalID: 7649190519336736454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27ac13f7448a8db0800000000000000
+      internalID: -4788869809198815441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb389b7937e3bdd80800000000000000
+      internalID: -8224911628274400325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38f2cdefc27016120800000000000000
+      internalID: 2405211565828353923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c72e44026e912f0800000000000000
+      internalID: -1001516415844189115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b826d5e658e801b80800000000000000
+      internalID: -8426078199076789621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6dbdb705d017a50800000000000000
+      internalID: 6517004775108368061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_10
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe0c219072364410800000000000000
+      internalID: 1460910588181614331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_11
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f5a802e4f375930800000000000000
+      internalID: 4131840787921657668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_12
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1faadb03029de9670800000000000000
+      internalID: 8547507875075697393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_13
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03abf2371f0b528a0800000000000000
+      internalID: -6330459150133249488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_14
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7dd1007ac1854d80800000000000000
+      internalID: -8267058834506130052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal_gate_blue_32_nofloor_15
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 5
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61002d54201764830800000000000000
+      internalID: 4055052769068974102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      portal_gate_blue_32_nofloor_0: -2042531512103171403
+      portal_gate_blue_32_nofloor_1: -3586306605636740416
+      portal_gate_blue_32_nofloor_10: 1460910588181614331
+      portal_gate_blue_32_nofloor_11: 4131840787921657668
+      portal_gate_blue_32_nofloor_12: 8547507875075697393
+      portal_gate_blue_32_nofloor_13: -6330459150133249488
+      portal_gate_blue_32_nofloor_14: -8267058834506130052
+      portal_gate_blue_32_nofloor_15: 4055052769068974102
+      portal_gate_blue_32_nofloor_2: 5073099559292275683
+      portal_gate_blue_32_nofloor_3: 7649190519336736454
+      portal_gate_blue_32_nofloor_4: -4788869809198815441
+      portal_gate_blue_32_nofloor_5: -8224911628274400325
+      portal_gate_blue_32_nofloor_6: 2405211565828353923
+      portal_gate_blue_32_nofloor_7: -1001516415844189115
+      portal_gate_blue_32_nofloor_8: -8426078199076789621
+      portal_gate_blue_32_nofloor_9: 6517004775108368061
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

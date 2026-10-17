@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 570e2953f90eb7d42a0e52af838867b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7459167192344980873
+    second: rift_red_32_strip_0
+  - first:
+      213: -3508143914512542761
+    second: rift_red_32_strip_1
+  - first:
+      213: -5161804299407966292
+    second: rift_red_32_strip_2
+  - first:
+      213: -6814539069425388194
+    second: rift_red_32_strip_3
+  - first:
+      213: -9141618006619864788
+    second: rift_red_32_strip_4
+  - first:
+      213: -6041101932192826822
+    second: rift_red_32_strip_5
+  - first:
+      213: 6786580923155659408
+    second: rift_red_32_strip_6
+  - first:
+      213: -6956031577483718272
+    second: rift_red_32_strip_7
+  - first:
+      213: 5859663552444597517
+    second: rift_red_32_strip_8
+  - first:
+      213: -828899953310405822
+    second: rift_red_32_strip_9
+  - first:
+      213: 5046525968733644717
+    second: rift_red_32_strip_10
+  - first:
+      213: 7615097930015805468
+    second: rift_red_32_strip_11
+  - first:
+      213: 6252515497059434452
+    second: rift_red_32_strip_12
+  - first:
+      213: -7297921281357594840
+    second: rift_red_32_strip_13
+  - first:
+      213: -821054239447936726
+    second: rift_red_32_strip_14
+  - first:
+      213: 1247835367604503663
+    second: rift_red_32_strip_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rift_red_32_strip_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 19
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d68f38a09448760800000000000000
+      internalID: 7459167192344980873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 19
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3188a52b1905fc0800000000000000
+      internalID: -3508143914512542761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_2
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 15
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf34bd86569d58b0800000000000000
+      internalID: -5161804299407966292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 7
+        width: 86
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55f0e242d4ed61a0800000000000000
+      internalID: -6814539069425388194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_4
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 7
+        width: 86
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21cb1b7bd2722180800000000000000
+      internalID: -9141618006619864788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_5
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 19
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a78bfbcc1b92ca0800000000000000
+      internalID: -6041101932192826822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_6
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 19
+        width: 82
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ab22c8467ce2e50800000000000000
+      internalID: 6786580923155659408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_7
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 23
+        width: 82
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081dea98226377f90800000000000000
+      internalID: -6956031577483718272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_8
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 23
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0583c284f4b15150800000000000000
+      internalID: 5859663552444597517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_9
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 23
+        width: 82
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24b689852e72f74f0800000000000000
+      internalID: -828899953310405822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_10
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 19
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7272481acd80640800000000000000
+      internalID: 5046525968733644717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_11
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 15
+        width: 98
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10976888334ea960800000000000000
+      internalID: 7615097930015805468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_12
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 15
+        width: 94
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df3ad2a7b565c650800000000000000
+      internalID: 6252515497059434452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_13
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 19
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82fbae9b24398ba90800000000000000
+      internalID: -7297921281357594840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_14
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 19
+        width: 86
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a219064f4870b94f0800000000000000
+      internalID: -821054239447936726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_red_32_strip_15
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 19
+        width: 82
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f644c30d7a3315110800000000000000
+      internalID: 1247835367604503663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rift_red_32_strip_0: 7459167192344980873
+      rift_red_32_strip_1: -3508143914512542761
+      rift_red_32_strip_10: 5046525968733644717
+      rift_red_32_strip_11: 7615097930015805468
+      rift_red_32_strip_12: 6252515497059434452
+      rift_red_32_strip_13: -7297921281357594840
+      rift_red_32_strip_14: -821054239447936726
+      rift_red_32_strip_15: 1247835367604503663
+      rift_red_32_strip_2: -5161804299407966292
+      rift_red_32_strip_3: -6814539069425388194
+      rift_red_32_strip_4: -9141618006619864788
+      rift_red_32_strip_5: -6041101932192826822
+      rift_red_32_strip_6: 6786580923155659408
+      rift_red_32_strip_7: -6956031577483718272
+      rift_red_32_strip_8: 5859663552444597517
+      rift_red_32_strip_9: -828899953310405822
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

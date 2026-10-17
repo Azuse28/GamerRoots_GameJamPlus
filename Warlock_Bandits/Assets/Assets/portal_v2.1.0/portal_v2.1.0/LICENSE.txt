@@ -1,0 +1,19 @@
+Portal - Asset Licence
+Copyright (c) 2026 Aleš Kuklík
+
+YOU MAY
+  - use these assets in an unlimited number of commercial and non-commercial
+    projects, including games, prototypes and videos
+  - modify, recolour, extend and re-export the assets for use in your projects
+  - use them in team projects, provided each seat holds its own licence
+
+YOU MAY NOT
+  - resell, sublicense or redistribute the assets as assets, whether original,
+    modified or as part of another asset pack or template
+  - use them to train generative machine-learning models
+  - claim authorship of the original artwork
+
+No attribution is required. The assets are provided "as is", without warranty
+of any kind.
+
+This is a plain-language summary written for convenience, not legal advice.

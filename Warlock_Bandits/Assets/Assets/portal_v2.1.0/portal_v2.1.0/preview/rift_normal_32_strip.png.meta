@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 035e77205f00e3142a482dbbf46496ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4283289352039388367
+    second: rift_normal_32_strip_0
+  - first:
+      213: -3176084098131757018
+    second: rift_normal_32_strip_1
+  - first:
+      213: 6316050297604720424
+    second: rift_normal_32_strip_2
+  - first:
+      213: 8127759869553326803
+    second: rift_normal_32_strip_3
+  - first:
+      213: -6981350488513507863
+    second: rift_normal_32_strip_4
+  - first:
+      213: -3188326539425628140
+    second: rift_normal_32_strip_5
+  - first:
+      213: 4533144561961853779
+    second: rift_normal_32_strip_6
+  - first:
+      213: 6019058519720349735
+    second: rift_normal_32_strip_7
+  - first:
+      213: 2483706240073949410
+    second: rift_normal_32_strip_8
+  - first:
+      213: 800038162555261621
+    second: rift_normal_32_strip_9
+  - first:
+      213: -2881265243539860405
+    second: rift_normal_32_strip_10
+  - first:
+      213: 4091156480167596713
+    second: rift_normal_32_strip_11
+  - first:
+      213: 4558906959867993893
+    second: rift_normal_32_strip_12
+  - first:
+      213: 6774333363436336441
+    second: rift_normal_32_strip_13
+  - first:
+      213: -687378777339200373
+    second: rift_normal_32_strip_14
+  - first:
+      213: -7608785542096153862
+    second: rift_normal_32_strip_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rift_normal_32_strip_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 11
+        width: 78
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc4558ac8fc417b30800000000000000
+      internalID: 4283289352039388367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 11
+        width: 74
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628f61227584ce3d0800000000000000
+      internalID: -3176084098131757018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_2
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 15
+        width: 74
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827ca34284e17a750800000000000000
+      internalID: 6316050297604720424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_3
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 19
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dab664e98a9bc070800000000000000
+      internalID: 8127759869553326803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_4
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 23
+        width: 82
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed07af28b24d1f90800000000000000
+      internalID: -6981350488513507863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_5
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 23
+        width: 86
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410c595a7e9c0c3d0800000000000000
+      internalID: -3188326539425628140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_6
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 19
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353ea3326f6f8ee30800000000000000
+      internalID: 4533144561961853779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_7
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 19
+        width: 90
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720583655ddf78350800000000000000
+      internalID: 6019058519720349735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_8
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 19
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e067068aa5e77220800000000000000
+      internalID: 2483706240073949410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_9
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 23
+        width: 86
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2dcd5587e4a1b00800000000000000
+      internalID: 800038162555261621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_10
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 23
+        width: 86
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b44902fc680b308d0800000000000000
+      internalID: -2881265243539860405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_11
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 23
+        width: 86
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a25de09425b6c830800000000000000
+      internalID: 4091156480167596713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_12
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 19
+        width: 90
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fdcf2d9bd744f30800000000000000
+      internalID: 4558906959867993893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_13
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 15
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93533b55d44430e50800000000000000
+      internalID: 6774333363436336441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_14
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 15
+        width: 94
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8cfd86d4a0f576f0800000000000000
+      internalID: -687378777339200373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rift_normal_32_strip_15
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 15
+        width: 86
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af21b3fccd9286690800000000000000
+      internalID: -7608785542096153862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rift_normal_32_strip_0: 4283289352039388367
+      rift_normal_32_strip_1: -3176084098131757018
+      rift_normal_32_strip_10: -2881265243539860405
+      rift_normal_32_strip_11: 4091156480167596713
+      rift_normal_32_strip_12: 4558906959867993893
+      rift_normal_32_strip_13: 6774333363436336441
+      rift_normal_32_strip_14: -687378777339200373
+      rift_normal_32_strip_15: -7608785542096153862
+      rift_normal_32_strip_2: 6316050297604720424
+      rift_normal_32_strip_3: 8127759869553326803
+      rift_normal_32_strip_4: -6981350488513507863
+      rift_normal_32_strip_5: -3188326539425628140
+      rift_normal_32_strip_6: 4533144561961853779
+      rift_normal_32_strip_7: 6019058519720349735
+      rift_normal_32_strip_8: 2483706240073949410
+      rift_normal_32_strip_9: 800038162555261621
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

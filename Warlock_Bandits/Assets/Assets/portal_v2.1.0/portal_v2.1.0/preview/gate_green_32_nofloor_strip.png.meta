@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 51d9e25b1d22f884293dda13bbac1986
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6415599865132049989
+    second: gate_green_32_nofloor_strip_0
+  - first:
+      213: 6830688459830225654
+    second: gate_green_32_nofloor_strip_1
+  - first:
+      213: -4836254248893847058
+    second: gate_green_32_nofloor_strip_2
+  - first:
+      213: -6260810526709541642
+    second: gate_green_32_nofloor_strip_3
+  - first:
+      213: -1246627342879497187
+    second: gate_green_32_nofloor_strip_4
+  - first:
+      213: 3794422653680420579
+    second: gate_green_32_nofloor_strip_5
+  - first:
+      213: 2527268962384130147
+    second: gate_green_32_nofloor_strip_6
+  - first:
+      213: 8919410109781934545
+    second: gate_green_32_nofloor_strip_7
+  - first:
+      213: 187804659017967806
+    second: gate_green_32_nofloor_strip_8
+  - first:
+      213: 4122330176305093108
+    second: gate_green_32_nofloor_strip_9
+  - first:
+      213: 4404364107057298622
+    second: gate_green_32_nofloor_strip_10
+  - first:
+      213: 2942995961222373769
+    second: gate_green_32_nofloor_strip_11
+  - first:
+      213: 6987327360469270530
+    second: gate_green_32_nofloor_strip_12
+  - first:
+      213: 4626320413518561102
+    second: gate_green_32_nofloor_strip_13
+  - first:
+      213: 5663682329911029452
+    second: gate_green_32_nofloor_strip_14
+  - first:
+      213: -6615503833176473618
+    second: gate_green_32_nofloor_strip_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb992c9f9e537f6a0800000000000000
+      internalID: -6415599865132049989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa6a83b6fa7bce50800000000000000
+      internalID: 6830688459830225654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_2
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9653b526c22ecb0800000000000000
+      internalID: -4836254248893847058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_3
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f493754ff12d19a0800000000000000
+      internalID: -6260810526709541642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_4
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14e06c590713bee0800000000000000
+      internalID: -1246627342879497187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_5
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 27
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e60150cc4f78a430800000000000000
+      internalID: 3794422653680420579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_6
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 27
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360b6c23bb9a21320800000000000000
+      internalID: 2527268962384130147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_7
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 27
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1849fdc3c18cb70800000000000000
+      internalID: 8919410109781934545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_8
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 27
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8ede3a7573b9200800000000000000
+      internalID: 187804659017967806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_9
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 27
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9d98d4475753930800000000000000
+      internalID: 4122330176305093108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_10
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 27
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc71aee1d17f1d30800000000000000
+      internalID: 4404364107057298622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_11
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 27
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981a11ceb3f97d820800000000000000
+      internalID: 2942995961222373769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_12
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2008322c639f7f060800000000000000
+      internalID: 6987327360469270530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_13
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f79e0a7edf33040800000000000000
+      internalID: 4626320413518561102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_14
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccee0035211799e40800000000000000
+      internalID: 5663682329911029452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gate_green_32_nofloor_strip_15
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 23
+        width: 74
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeff74d60520134a0800000000000000
+      internalID: -6615503833176473618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gate_green_32_nofloor_strip_0: -6415599865132049989
+      gate_green_32_nofloor_strip_1: 6830688459830225654
+      gate_green_32_nofloor_strip_10: 4404364107057298622
+      gate_green_32_nofloor_strip_11: 2942995961222373769
+      gate_green_32_nofloor_strip_12: 6987327360469270530
+      gate_green_32_nofloor_strip_13: 4626320413518561102
+      gate_green_32_nofloor_strip_14: 5663682329911029452
+      gate_green_32_nofloor_strip_15: -6615503833176473618
+      gate_green_32_nofloor_strip_2: -4836254248893847058
+      gate_green_32_nofloor_strip_3: -6260810526709541642
+      gate_green_32_nofloor_strip_4: -1246627342879497187
+      gate_green_32_nofloor_strip_5: 3794422653680420579
+      gate_green_32_nofloor_strip_6: 2527268962384130147
+      gate_green_32_nofloor_strip_7: 8919410109781934545
+      gate_green_32_nofloor_strip_8: 187804659017967806
+      gate_green_32_nofloor_strip_9: 4122330176305093108
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,27 @@
+{
+  "pack_id": "portal",
+  "display_name": "Portal",
+  "version": "2.1.0",
+  "image": "portal_rift_blue_32.png",
+  "cell": {
+    "width": 32,
+    "height": 32
+  },
+  "columns": 16,
+  "rows": 1,
+  "anchor": "center",
+  "perspective": "effect",
+  "clips": [
+    {
+      "name": "rift_blue_32",
+      "animation": "rift_blue_32",
+      "direction": "fx",
+      "row": 0,
+      "from": 0,
+      "to": 15,
+      "frames": 16,
+      "fps": 12,
+      "loop": true
+    }
+  ]
+}
