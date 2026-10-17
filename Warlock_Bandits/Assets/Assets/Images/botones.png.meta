@@ -1,0 +1,990 @@
+fileFormatVersion: 2
+guid: 273bb9782e0550a4d817bca3397d8706
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2986093548259557809
+    second: Untitled-1 [Recovered]_0
+  - first:
+      213: -7996259891908337394
+    second: Untitled-1 [Recovered]_1
+  - first:
+      213: 5166784662835989983
+    second: Untitled-1 [Recovered]_2
+  - first:
+      213: 4389450817555195991
+    second: Untitled-1 [Recovered]_3
+  - first:
+      213: -2360170859293312084
+    second: Untitled-1 [Recovered]_4
+  - first:
+      213: -2188589031030349425
+    second: Untitled-1 [Recovered]_5
+  - first:
+      213: -102465338842675189
+    second: Untitled-1 [Recovered]_6
+  - first:
+      213: -8616396466425701680
+    second: Untitled-1 [Recovered]_7
+  - first:
+      213: -3720643015449221764
+    second: Untitled-1 [Recovered]_8
+  - first:
+      213: -4619637751130131660
+    second: Untitled-1 [Recovered]_9
+  - first:
+      213: -4558031455014308995
+    second: Untitled-1 [Recovered]_10
+  - first:
+      213: -6872383031170764803
+    second: Untitled-1 [Recovered]_11
+  - first:
+      213: 183108171212042340
+    second: Untitled-1 [Recovered]_12
+  - first:
+      213: -3863516664792211754
+    second: Untitled-1 [Recovered]_13
+  - first:
+      213: -7800220349490500846
+    second: Untitled-1 [Recovered]_14
+  - first:
+      213: -8887211321738440232
+    second: Untitled-1 [Recovered]_15
+  - first:
+      213: 7276992149720635424
+    second: Untitled-1 [Recovered]_16
+  - first:
+      213: -8695886135216209877
+    second: Untitled-1 [Recovered]_17
+  - first:
+      213: -568337080982054160
+    second: Untitled-1 [Recovered]_18
+  - first:
+      213: 8874371048222449612
+    second: Untitled-1 [Recovered]_19
+  - first:
+      213: 5460971043738011004
+    second: Untitled-1 [Recovered]_20
+  - first:
+      213: -2584224859202626878
+    second: Untitled-1 [Recovered]_21
+  - first:
+      213: 4895409785569747141
+    second: Untitled-1 [Recovered]_22
+  - first:
+      213: -191089372694926637
+    second: Untitled-1 [Recovered]_23
+  - first:
+      213: 1306667383635936209
+    second: Untitled-1 [Recovered]_24
+  - first:
+      213: 2355513285884418306
+    second: Untitled-1 [Recovered]_25
+  - first:
+      213: -7626302550297915153
+    second: Untitled-1 [Recovered]_26
+  - first:
+      213: -4162742498753168819
+    second: Untitled-1 [Recovered]_27
+  - first:
+      213: -5966884928225030186
+    second: Untitled-1 [Recovered]_28
+  - first:
+      213: -5533185378136532396
+    second: Untitled-1 [Recovered]_29
+  - first:
+      213: 8061748562869694536
+    second: Untitled-1 [Recovered]_30
+  - first:
+      213: 5233838753808411392
+    second: Untitled-1 [Recovered]_31
+  - first:
+      213: -106263439734336953
+    second: Untitled-1 [Recovered]_32
+  - first:
+      213: -2922729830144598891
+    second: Untitled-1 [Recovered]_33
+  - first:
+      213: 4851462721987647625
+    second: Untitled-1 [Recovered]_34
+  - first:
+      213: -3976946969824657724
+    second: Untitled-1 [Recovered]_35
+  - first:
+      213: 7251917871031723579
+    second: Untitled-1 [Recovered]_36
+  - first:
+      213: -4642225517732781221
+    second: Untitled-1 [Recovered]_37
+  - first:
+      213: 1760862242071948690
+    second: Untitled-1 [Recovered]_38
+  - first:
+      213: 5561395377125103510
+    second: Untitled-1 [Recovered]_39
+  - first:
+      213: -2097128623892032395
+    second: Untitled-1 [Recovered]_40
+  - first:
+      213: -8181895510793905543
+    second: Untitled-1 [Recovered]_41
+  - first:
+      213: 434105572663402031
+    second: Untitled-1 [Recovered]_42
+  - first:
+      213: -3924390129746216859
+    second: Untitled-1 [Recovered]_43
+  - first:
+      213: 5862539755118982401
+    second: Untitled-1 [Recovered]_44
+  - first:
+      213: -4947620983080844507
+    second: Untitled-1 [Recovered]_45
+  - first:
+      213: 1894437719372869283
+    second: Untitled-1 [Recovered]_46
+  - first:
+      213: -1245770834889913529
+    second: Untitled-1 [Recovered]_47
+  - first:
+      213: 5459907645912960097
+    second: Untitled-1 [Recovered]_48
+  - first:
+      213: -3984954764091617474
+    second: Untitled-1 [Recovered]_49
+  - first:
+      213: 3842293841622604251
+    second: Untitled-1 [Recovered]_50
+  - first:
+      213: 3743704250965232775
+    second: Untitled-1 [Recovered]_51
+  - first:
+      213: 2670866660252287759
+    second: Untitled-1 [Recovered]_52
+  - first:
+      213: -5644915348756526646
+    second: Untitled-1 [Recovered]_53
+  - first:
+      213: 4256350161853820953
+    second: Untitled-1 [Recovered]_54
+  - first:
+      213: 1400205965669542666
+    second: Untitled-1 [Recovered]_55
+  - first:
+      213: 4580738814514074078
+    second: Untitled-1 [Recovered]_56
+  - first:
+      213: -8491752447201316439
+    second: Untitled-1 [Recovered]_57
+  - first:
+      213: -2924797406670115982
+    second: Untitled-1 [Recovered]_58
+  - first:
+      213: 1041239654994660062
+    second: Untitled-1 [Recovered]_59
+  - first:
+      213: 5098074688767147346
+    second: Untitled-1 [Recovered]_60
+  - first:
+      213: -175381657393842047
+    second: Untitled-1 [Recovered]_61
+  - first:
+      213: -885352040174633491
+    second: Untitled-1 [Recovered]_62
+  - first:
+      213: -7659544604311547822
+    second: Untitled-1 [Recovered]_63
+  - first:
+      213: -4720224084181173944
+    second: Untitled-1 [Recovered]_64
+  - first:
+      213: 5968861876844866387
+    second: Untitled-1 [Recovered]_65
+  - first:
+      213: -8913583480924918378
+    second: Untitled-1 [Recovered]_66
+  - first:
+      213: 3166771836517789881
+    second: Untitled-1 [Recovered]_67
+  - first:
+      213: 4715992169709404449
+    second: Untitled-1 [Recovered]_68
+  - first:
+      213: 3123699903570750260
+    second: Untitled-1 [Recovered]_69
+  - first:
+      213: -2040304409607787027
+    second: Untitled-1 [Recovered]_70
+  - first:
+      213: -4788121686855268217
+    second: Untitled-1 [Recovered]_71
+  - first:
+      213: -8666090728945696346
+    second: Untitled-1 [Recovered]_72
+  - first:
+      213: -4482325117728405342
+    second: Untitled-1 [Recovered]_73
+  - first:
+      213: -8516761663273785756
+    second: Untitled-1 [Recovered]_74
+  - first:
+      213: -8547838963917246242
+    second: Untitled-1 [Recovered]_75
+  - first:
+      213: -6590803724402445845
+    second: Untitled-1 [Recovered]_76
+  - first:
+      213: -1204781101673709293
+    second: Untitled-1 [Recovered]_77
+  - first:
+      213: 880791660487147895
+    second: Untitled-1 [Recovered]_78
+  - first:
+      213: 8844279801999844187
+    second: Untitled-1 [Recovered]_79
+  - first:
+      213: 7495527305707839413
+    second: Untitled-1 [Recovered]_80
+  - first:
+      213: 8342517080827400803
+    second: Untitled-1 [Recovered]_81
+  - first:
+      213: 8358295148813197247
+    second: Untitled-1 [Recovered]_82
+  - first:
+      213: 8491197470463771693
+    second: Untitled-1 [Recovered]_83
+  - first:
+      213: -1907730352410815613
+    second: Untitled-1 [Recovered]_84
+  - first:
+      213: 7994730873633382921
+    second: Untitled-1 [Recovered]_85
+  - first:
+      213: 3437101517932443308
+    second: Untitled-1 [Recovered]_86
+  - first:
+      213: -8267685735280650203
+    second: Untitled-1 [Recovered]_87
+  - first:
+      213: -4794539678259794712
+    second: Untitled-1 [Recovered]_88
+  - first:
+      213: -4326944567443435633
+    second: Untitled-1 [Recovered]_89
+  - first:
+      213: 2777836586588907665
+    second: Untitled-1 [Recovered]_90
+  - first:
+      213: 6640785048086726806
+    second: Untitled-1 [Recovered]_91
+  - first:
+      213: 1867300228043331373
+    second: Untitled-1 [Recovered]_92
+  - first:
+      213: 4867800482542256758
+    second: Untitled-1 [Recovered]_93
+  - first:
+      213: 6540747476227096541
+    second: Untitled-1 [Recovered]_94
+  - first:
+      213: 1253843557841454050
+    second: Untitled-1 [Recovered]_95
+  - first:
+      213: -5590311655790680038
+    second: Untitled-1 [Recovered]_96
+  - first:
+      213: -6150268580419354709
+    second: Untitled-1 [Recovered]_97
+  - first:
+      213: 4981562972401772491
+    second: Untitled-1 [Recovered]_98
+  - first:
+      213: 3160005518597786321
+    second: Untitled-1 [Recovered]_99
+  - first:
+      213: -2898191338955263997
+    second: Untitled-1 [Recovered]_100
+  - first:
+      213: 7461599822248215998
+    second: Untitled-1 [Recovered]_101
+  - first:
+      213: -4717399004356217234
+    second: Untitled-1 [Recovered]_102
+  - first:
+      213: 8941443629518152346
+    second: Untitled-1 [Recovered]_103
+  - first:
+      213: -1820354691650559433
+    second: Untitled-1 [Recovered]_104
+  - first:
+      213: 5315224263546963958
+    second: Untitled-1 [Recovered]_105
+  - first:
+      213: 7580627705448056299
+    second: Untitled-1 [Recovered]_106
+  - first:
+      213: 8042655288096019663
+    second: Untitled-1 [Recovered]_107
+  - first:
+      213: -2301343935944543575
+    second: Untitled-1 [Recovered]_108
+  - first:
+      213: 4243694006479576717
+    second: Untitled-1 [Recovered]_109
+  - first:
+      213: -4486437003837831185
+    second: Untitled-1 [Recovered]_110
+  - first:
+      213: 7869178544982933015
+    second: Untitled-1 [Recovered]_111
+  - first:
+      213: 5797151972860758327
+    second: Untitled-1 [Recovered]_112
+  - first:
+      213: 5165675517033884395
+    second: Untitled-1 [Recovered]_113
+  - first:
+      213: 4135622327782207517
+    second: Untitled-1 [Recovered]_114
+  - first:
+      213: 4929912026646829469
+    second: Untitled-1 [Recovered]_115
+  - first:
+      213: 290130205480787605
+    second: Untitled-1 [Recovered]_116
+  - first:
+      213: -254145568244152603
+    second: Untitled-1 [Recovered]_117
+  - first:
+      213: 8056772008250675100
+    second: Untitled-1 [Recovered]_118
+  - first:
+      213: -8090878219476300569
+    second: Untitled-1 [Recovered]_119
+  - first:
+      213: -1418014332230443767
+    second: Untitled-1 [Recovered]_120
+  - first:
+      213: -7213860832413966231
+    second: Untitled-1 [Recovered]_121
+  - first:
+      213: 3748916831489881449
+    second: Untitled-1 [Recovered]_122
+  - first:
+      213: -2655282104289770302
+    second: Untitled-1 [Recovered]_123
+  - first:
+      213: 601551214295918595
+    second: Untitled-1 [Recovered]_124
+  - first:
+      213: 887403577871032827
+    second: Untitled-1 [Recovered]_125
+  - first:
+      213: 7058666716078311240
+    second: Untitled-1 [Recovered]_126
+  - first:
+      213: -7929929380624076369
+    second: Untitled-1 [Recovered]_127
+  - first:
+      213: 5611261579783877379
+    second: Untitled-1 [Recovered]_128
+  - first:
+      213: -6058178015943559927
+    second: Untitled-1 [Recovered]_129
+  - first:
+      213: -4198985236530441800
+    second: Untitled-1 [Recovered]_130
+  - first:
+      213: -8922960658131307315
+    second: Untitled-1 [Recovered]_131
+  - first:
+      213: -7731328784417440763
+    second: Untitled-1 [Recovered]_132
+  - first:
+      213: 9220678930588722569
+    second: Untitled-1 [Recovered]_133
+  - first:
+      213: -8303850390289547921
+    second: Untitled-1 [Recovered]_134
+  - first:
+      213: -3999325037410588703
+    second: Untitled-1 [Recovered]_135
+  - first:
+      213: -9209964114158420203
+    second: Untitled-1 [Recovered]_136
+  - first:
+      213: 110543081869552036
+    second: Untitled-1 [Recovered]_137
+  - first:
+      213: -4727908560786122990
+    second: Untitled-1 [Recovered]_138
+  - first:
+      213: 5682454069169751296
+    second: Untitled-1 [Recovered]_139
+  - first:
+      213: 340925290890309992
+    second: Untitled-1 [Recovered]_140
+  - first:
+      213: 8806091280793046346
+    second: Untitled-1 [Recovered]_141
+  - first:
+      213: -4823642155200511702
+    second: Untitled-1 [Recovered]_142
+  - first:
+      213: -4635872056390717162
+    second: Untitled-1 [Recovered]_143
+  - first:
+      213: 5467341643813351385
+    second: Untitled-1 [Recovered]_144
+  - first:
+      213: 6348443588563830489
+    second: Untitled-1 [Recovered]_145
+  - first:
+      213: 6680247317634486092
+    second: Untitled-1 [Recovered]_146
+  - first:
+      213: 6874130991078897989
+    second: Untitled-1 [Recovered]_147
+  - first:
+      213: 1304917055909327461
+    second: Untitled-1 [Recovered]_148
+  - first:
+      213: 2699751217026512225
+    second: Untitled-1 [Recovered]_149
+  - first:
+      213: -2868704536252741828
+    second: Untitled-1 [Recovered]_150
+  - first:
+      213: 7341204552315840641
+    second: Untitled-1 [Recovered]_151
+  - first:
+      213: 7532610333218205784
+    second: Untitled-1 [Recovered]_152
+  - first:
+      213: 1839328302936778782
+    second: Untitled-1 [Recovered]_153
+  - first:
+      213: -6335035447980779637
+    second: Untitled-1 [Recovered]_154
+  - first:
+      213: 575064040996020586
+    second: Untitled-1 [Recovered]_155
+  - first:
+      213: 7639344221800334061
+    second: Untitled-1 [Recovered]_156
+  - first:
+      213: -703092761187908675
+    second: Untitled-1 [Recovered]_157
+  - first:
+      213: -7566300975659110093
+    second: Untitled-1 [Recovered]_158
+  - first:
+      213: 834700478142316832
+    second: Untitled-1 [Recovered]_159
+  - first:
+      213: -1648947340686021482
+    second: Untitled-1 [Recovered]_160
+  - first:
+      213: 2589109141069472834
+    second: Untitled-1 [Recovered]_161
+  - first:
+      213: 2789658971794947380
+    second: Untitled-1 [Recovered]_162
+  - first:
+      213: 7127620553097300259
+    second: Untitled-1 [Recovered]_163
+  - first:
+      213: -5439548917867770496
+    second: Untitled-1 [Recovered]_164
+  - first:
+      213: -2204571137745771013
+    second: Untitled-1 [Recovered]_165
+  - first:
+      213: -459793610229948103
+    second: Untitled-1 [Recovered]_166
+  - first:
+      213: -6597874165760177624
+    second: Untitled-1 [Recovered]_167
+  - first:
+      213: 4819433152845092612
+    second: Untitled-1 [Recovered]_168
+  - first:
+      213: -5909351908916938316
+    second: Untitled-1 [Recovered]_169
+  - first:
+      213: -5425113366420662870
+    second: Untitled-1 [Recovered]_170
+  - first:
+      213: -7009607847545740562
+    second: Untitled-1 [Recovered]_171
+  - first:
+      213: -5858622730362742047
+    second: Untitled-1 [Recovered]_172
+  - first:
+      213: -7319921443047928274
+    second: Untitled-1 [Recovered]_173
+  - first:
+      213: 6027367664834737240
+    second: Untitled-1 [Recovered]_174
+  - first:
+      213: -1218760688303623298
+    second: Untitled-1 [Recovered]_175
+  - first:
+      213: 3803284500421385751
+    second: Untitled-1 [Recovered]_176
+  - first:
+      213: 5298438543706735662
+    second: Untitled-1 [Recovered]_177
+  - first:
+      213: 9101554414515383508
+    second: Untitled-1 [Recovered]_178
+  - first:
+      213: -2424083653731564922
+    second: Untitled-1 [Recovered]_179
+  - first:
+      213: 3086128777938812351
+    second: Untitled-1 [Recovered]_180
+  - first:
+      213: 4771143034117743442
+    second: Untitled-1 [Recovered]_181
+  - first:
+      213: 8586450850022556496
+    second: Untitled-1 [Recovered]_182
+  - first:
+      213: 6502898950272338489
+    second: Untitled-1 [Recovered]_183
+  - first:
+      213: 921187445225073811
+    second: Untitled-1 [Recovered]_184
+  - first:
+      213: -3158266532988134964
+    second: Untitled-1 [Recovered]_185
+  - first:
+      213: 165862736350174182
+    second: Untitled-1 [Recovered]_186
+  - first:
+      213: 329618827039997125
+    second: Untitled-1 [Recovered]_187
+  - first:
+      213: 3676798508733705555
+    second: Untitled-1 [Recovered]_188
+  - first:
+      213: -2296798064961847092
+    second: Untitled-1 [Recovered]_189
+  - first:
+      213: 7519474364964933398
+    second: Untitled-1 [Recovered]_190
+  - first:
+      213: 6346968340708270269
+    second: Untitled-1 [Recovered]_191
+  - first:
+      213: 4664173696939225102
+    second: Untitled-1 [Recovered]_192
+  - first:
+      213: -6633745979011159727
+    second: Untitled-1 [Recovered]_193
+  - first:
+      213: -3942517070493689733
+    second: Untitled-1 [Recovered]_194
+  - first:
+      213: 7374808829670500405
+    second: Untitled-1 [Recovered]_195
+  - first:
+      213: -5011021642561656149
+    second: Untitled-1 [Recovered]_196
+  - first:
+      213: -8092624019169264278
+    second: Untitled-1 [Recovered]_197
+  - first:
+      213: 2385500968889533892
+    second: Untitled-1 [Recovered]_198
+  - first:
+      213: 2216237680697031878
+    second: Untitled-1 [Recovered]_199
+  - first:
+      213: 8166954497561189148
+    second: Untitled-1 [Recovered]_200
+  - first:
+      213: 4855686068479899497
+    second: Untitled-1 [Recovered]_201
+  - first:
+      213: 6632007476677811123
+    second: Untitled-1 [Recovered]_202
+  - first:
+      213: -4732177816297297522
+    second: Untitled-1 [Recovered]_203
+  - first:
+      213: 4702938948730717263
+    second: Untitled-1 [Recovered]_204
+  - first:
+      213: -8103554057518465258
+    second: Untitled-1 [Recovered]_205
+  - first:
+      213: 6277850100146773319
+    second: Untitled-1 [Recovered]_206
+  - first:
+      213: 7691442288604997307
+    second: Untitled-1 [Recovered]_207
+  - first:
+      213: -3335386363636598870
+    second: Untitled-1 [Recovered]_208
+  - first:
+      213: 59092364804743543
+    second: Untitled-1 [Recovered]_209
+  - first:
+      213: 8450794012465858864
+    second: Untitled-1 [Recovered]_210
+  - first:
+      213: -8966206616658276361
+    second: Untitled-1 [Recovered]_211
+  - first:
+      213: -6812831466821023643
+    second: Untitled-1 [Recovered]_212
+  - first:
+      213: -716161602396631191
+    second: Untitled-1 [Recovered]_213
+  - first:
+      213: -3571430044103395250
+    second: Untitled-1 [Recovered]_214
+  - first:
+      213: 2851215560644243417
+    second: Untitled-1 [Recovered]_215
+  - first:
+      213: -9188463565336392943
+    second: Untitled-1 [Recovered]_216
+  - first:
+      213: -9008305149304213786
+    second: Untitled-1 [Recovered]_217
+  - first:
+      213: 1741442503659559761
+    second: Untitled-1 [Recovered]_218
+  - first:
+      213: -3682226445830230580
+    second: Untitled-1 [Recovered]_219
+  - first:
+      213: -307111784899392925
+    second: Untitled-1 [Recovered]_220
+  - first:
+      213: -8740135561193925860
+    second: Untitled-1 [Recovered]_221
+  - first:
+      213: -1151259457594139322
+    second: Untitled-1 [Recovered]_222
+  - first:
+      213: -3531959356465044727
+    second: Untitled-1 [Recovered]_223
+  - first:
+      213: 8451641916703316408
+    second: Untitled-1 [Recovered]_224
+  - first:
+      213: 4716121138954354841
+    second: Untitled-1 [Recovered]_225
+  - first:
+      213: 2187807728231058322
+    second: Untitled-1 [Recovered]_226
+  - first:
+      213: 4813287630886435134
+    second: Untitled-1 [Recovered]_227
+  - first:
+      213: 8092936461217089983
+    second: Untitled-1 [Recovered]_228
+  - first:
+      213: 3832025143541452737
+    second: Untitled-1 [Recovered]_229
+  - first:
+      213: -1497117809284316636
+    second: Untitled-1 [Recovered]_230
+  - first:
+      213: 8125559376329149313
+    second: Untitled-1 [Recovered]_231
+  - first:
+      213: -374815894468932379
+    second: Untitled-1 [Recovered]_232
+  - first:
+      213: 240352989021074876
+    second: Untitled-1 [Recovered]_233
+  - first:
+      213: -3677583841739672090
+    second: Untitled-1 [Recovered]_234
+  - first:
+      213: -5917532044342181245
+    second: Untitled-1 [Recovered]_235
+  - first:
+      213: 8516441592682187319
+    second: Untitled-1 [Recovered]_236
+  - first:
+      213: -5582310038398609953
+    second: Untitled-1 [Recovered]_237
+  - first:
+      213: 5422517204343530858
+    second: Untitled-1 [Recovered]_238
+  - first:
+      213: 7988885357868652007
+    second: Untitled-1 [Recovered]_239
+  - first:
+      213: -2817199222135619367
+    second: Untitled-1 [Recovered]_240
+  - first:
+      213: -2720926920924333361
+    second: Untitled-1 [Recovered]_241
+  - first:
+      213: -410012971540443216
+    second: Untitled-1 [Recovered]_242
+  - first:
+      213: -3928698462120484397
+    second: Untitled-1 [Recovered]_243
+  - first:
+      213: 5605566928284711875
+    second: Untitled-1 [Recovered]_244
+  - first:
+      213: 6196982285112010375
+    second: Untitled-1 [Recovered]_245
+  - first:
+      213: 5968834253887472239
+    second: Untitled-1 [Recovered]_246
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: botones_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1914
+        width: 1540
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f70c5347563db4ea3cfecc45398547
+      internalID: 577155283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1436
+        width: 1540
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3596189e83bbeb948a2e0cd3a4ddfc75
+      internalID: -1013325915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 958
+        width: 1540
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e568c1832624d49b4cc3287cb04e63
+      internalID: -644891394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 1540
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ef938218baab4499591ca1f61f5757
+      internalID: -527743148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botones_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 1540
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f711ce229e21e4295f9c41143aeac4
+      internalID: 1883474961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fd0dc0b54abe9aa46b913bac583d21e2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":5.0},"gridSpriteSize":{"x":1540.0,"y":478.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      botones_0: 577155283
+      botones_1: -1013325915
+      botones_2: -644891394
+      botones_3: -527743148
+      botones_4: 1883474961
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
