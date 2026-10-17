@@ -93,7 +93,7 @@ public class CreditsScrollDown : MonoBehaviour
             // Cambiar de escena si hay una configurada
             if (!string.IsNullOrWhiteSpace(nextSceneName))
             {
-                SceneManager.LoadScene(nextSceneName);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(nextSceneName);
             }
         }
     }
