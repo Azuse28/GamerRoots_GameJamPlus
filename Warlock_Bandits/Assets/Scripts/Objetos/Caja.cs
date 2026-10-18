@@ -279,6 +279,9 @@ public class Caja : MonoBehaviour
         alMorirPersonaje?.Invoke();
 
         Destroy(personaje);
+
+        if (DirectorEscenas.Instancia != null)
+            DirectorEscenas.Instancia.IrAGameOver();
     }
 
     void Bloquear()

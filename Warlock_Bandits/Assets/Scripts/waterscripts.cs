@@ -195,6 +195,9 @@ public class waterscripts : MonoBehaviour
         alMorirPersonaje?.Invoke();
 
         Destroy(personaje);
+
+        if (DirectorEscenas.Instancia != null)
+            DirectorEscenas.Instancia.IrAGameOver();
     }
 
     [ContextMenu("Congelar agua")]

@@ -186,6 +186,9 @@ public class DirectorEscenas : MonoBehaviour
 
     public void IrAGameOver()
     {
+        // Si los dos personajes mueren a la vez, solo se carga una vez
+        if (!estamosJugando) return;
+
         estamosJugando = false;
         juegoPausado = false;
         DescargarEscenasActivas();

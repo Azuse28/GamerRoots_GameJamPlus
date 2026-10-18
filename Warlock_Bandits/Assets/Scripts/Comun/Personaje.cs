@@ -21,5 +21,8 @@ public class Personaje : MonoBehaviour
             Instantiate(efectoMuerte, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
+
+        if (DirectorEscenas.Instancia != null)
+            DirectorEscenas.Instancia.IrAGameOver();
     }
 }
