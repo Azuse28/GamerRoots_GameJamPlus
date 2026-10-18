@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class BotonesMenu : MonoBehaviour
 {
@@ -7,30 +6,43 @@ public class BotonesMenu : MonoBehaviour
     public void BotonJugar()
     {
         if (DirectorEscenas.Instancia != null)
+        {
             DirectorEscenas.Instancia.IrAJugar();
+        }
         else
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Main");// Por si pruebas sin abrir Director
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Level0");
+        {
+            Debug.LogWarning("¡Ojo! Debes darle Play desde la escena 'Director' para cambiar de escenas.");
+        }
     }
 
     // Se conecta a BotonCredits
     public void BotonCreditos()
     {
         if (DirectorEscenas.Instancia != null)
+        {
             DirectorEscenas.Instancia.IrACreditos();
+        }
         else
-            UnityEngine.SceneManagement.SceneManager.LoadScene("CreditScene");
+        {
+            Debug.LogWarning("¡Ojo! Debes darle Play desde la escena 'Director' para ir a Créditos.");
+        }
+    }
+
+    // Por si ponen un botón físico de volver o al terminar una escena
+    public void BotonVolverAlMenu()
+    {
+        if (DirectorEscenas.Instancia != null)
+        {
+            DirectorEscenas.Instancia.IrAlMenu();
+        }
     }
 
     // Se conecta a BotonExit
     public void BotonSalir()
     {
         if (DirectorEscenas.Instancia != null)
-            DirectorEscenas.Instancia.SalirDelJuego();
-        else
         {
-            Debug.Log("Saliendo del juego...");
-            Application.Quit();
+            DirectorEscenas.Instancia.SalirDelJuego();
         }
     }
 }
