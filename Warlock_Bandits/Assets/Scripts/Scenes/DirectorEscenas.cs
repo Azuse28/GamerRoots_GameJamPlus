@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem; // Obligatorio para leer el teclado en Unity 6
+using UnityEngine.InputSystem;
 
 public class DirectorEscenas : MonoBehaviour
 {
@@ -16,13 +16,14 @@ public class DirectorEscenas : MonoBehaviour
     [SerializeField] private string escenaGameOver = "GameOverScene";
     [SerializeField] private string escenaWin = "WinScene";
 
-    [Header("Configuración de Créditos")]
-    [Tooltip("¡OJO! Cambia este número desde el Inspector de Unity en la escena Director")]
+    [Header("Configuración de Tiempos (Segundos)")]
+    [SerializeField] private float duracionWin = 5f; // 5 segundos en Win antes de pasar a Créditos
     [SerializeField] private float duracionCreditos = 15f; 
-    private float temporizadorCreditos = 0f;
+
+    private float temporizador = 0f;
+    private bool mostrandoWin = false;
     private bool reproduciendoCreditos = false;
 
-    // Estados para controlar la Pausa
     private bool estamosJugando = false;
     private bool juegoPausado = false;
 
@@ -47,47 +48,51 @@ public class DirectorEscenas : MonoBehaviour
 
     private void Update()
     {
-        // 1. CONTROL DE CRÉDITOS: Tecla ENTER o Temporizador
+        // 1. TEMPORIZADOR DE WIN (5 segundos y pasa solo a Créditos)
+        if (mostrandoWin)
+        {
+            temporizador += Time.unscaledDeltaTime;
+            if (temporizador >= duracionWin)
+            {
+                mostrandoWin = false;
+                IrACreditos(); // Pasa automáticamente a los créditos
+                return;
+            }
+        }
+
+        // 2. CONTROL DE CRÉDITOS (Tecla ENTER o Temporizador para volver al Menú)
         if (reproduciendoCreditos)
         {
-            temporizadorCreditos += Time.unscaledDeltaTime;
+            temporizador += Time.unscaledDeltaTime;
 
-            // Si toca ENTER o INTRO numérico, salta los créditos de inmediato
             if (Keyboard.current != null && (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.numpadEnterKey.wasPressedThisFrame))
             {
-                Debug.Log("Créditos saltados con ENTER");
                 reproduciendoCreditos = false;
                 IrAlMenu();
                 return;
             }
 
-            // Si se cumple el tiempo configurado en el Inspector, vuelve al menú solo
-            if (temporizadorCreditos >= duracionCreditos)
+            if (temporizador >= duracionCreditos)
             {
-                Debug.Log("Créditos terminados por tiempo: " + duracionCreditos + " seg.");
                 reproduciendoCreditos = false;
                 IrAlMenu();
                 return;
             }
         }
 
-        // 2. CONTROL DE PAUSA: Tecla ESC (solo funciona cuando estás dentro del nivel)
+        // 3. CONTROL DE PAUSA CON TECLA ESC
         if (estamosJugando && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (juegoPausado)
-            {
                 ReanudarJuego();
-            }
             else
-            {
                 PausarJuego();
-            }
         }
     }
 
     private void DescargarEscenasActivas()
     {
-        Time.timeScale = 1f; // Asegura que el tiempo del juego corra normal
+        Time.timeScale = 1f;
 
         foreach (string nombreEscena in escenasActivas)
         {
@@ -120,10 +125,9 @@ public class DirectorEscenas : MonoBehaviour
         }
     }
 
-    // --- NAVEGACIÓN PRINCIPAL ---
-
     public void IrAJugar()
     {
+        mostrandoWin = false;
         reproduciendoCreditos = false;
         juegoPausado = false;
         estamosJugando = true;
@@ -136,17 +140,19 @@ public class DirectorEscenas : MonoBehaviour
 
     public void IrACreditos()
     {
+        mostrandoWin = false;
         estamosJugando = false;
         juegoPausado = false;
         DescargarEscenasActivas();
         CargarAditiva(escenaCreditos);
 
-        temporizadorCreditos = 0f;
+        temporizador = 0f;
         reproduciendoCreditos = true;
     }
 
     public void IrAlMenu()
     {
+        mostrandoWin = false;
         reproduciendoCreditos = false;
         estamosJugando = false;
         juegoPausado = false;
@@ -156,15 +162,13 @@ public class DirectorEscenas : MonoBehaviour
         CargarAditiva(escenaMenu);
     }
 
-    // --- SISTEMA DE PAUSA ---
-
     public void PausarJuego()
     {
         if (!estamosJugando || juegoPausado) return;
 
         juegoPausado = true;
-        Time.timeScale = 0f; // Congela el nivel (personajes, física y enemigos)
-        CargarAditiva(escenaPausa); // Abre la escena de pausa encima del juego
+        Time.timeScale = 0f;
+        CargarAditiva(escenaPausa);
     }
 
     public void ReanudarJuego()
@@ -172,7 +176,7 @@ public class DirectorEscenas : MonoBehaviour
         if (!juegoPausado) return;
 
         juegoPausado = false;
-        Time.timeScale = 1f; // Descongela el nivel
+        Time.timeScale = 1f;
 
         if (SceneManager.GetSceneByName(escenaPausa).isLoaded)
         {
@@ -181,14 +185,10 @@ public class DirectorEscenas : MonoBehaviour
         escenasActivas.Remove(escenaPausa);
     }
 
-    // --- FUNCIONES DE FIN DEL JUEGO (Game Over y Win) ---
-    // Tus compañeros pueden llamar a DirectorEscenas.Instancia.IrAGameOver() o IrAWin()
-
     public void IrAGameOver()
     {
-        // Si los dos personajes mueren a la vez, solo se carga una vez
-        if (!estamosJugando) return;
-
+        mostrandoWin = false;
+        reproduciendoCreditos = false;
         estamosJugando = false;
         juegoPausado = false;
         DescargarEscenasActivas();
@@ -197,16 +197,20 @@ public class DirectorEscenas : MonoBehaviour
 
     public void IrAWin()
     {
+        reproduciendoCreditos = false;
         estamosJugando = false;
         juegoPausado = false;
         DescargarEscenasActivas();
         CargarAditiva(escenaWin);
+
+        // Inicia la cuenta de 5 segundos para saltar a Créditos
+        temporizador = 0f;
+        mostrandoWin = true;
     }
 
     public void SalirDelJuego()
     {
         Time.timeScale = 1f;
-        Debug.Log("Cerrando Warlock & Bandit...");
         Application.Quit();
 
 #if UNITY_EDITOR
