@@ -4038,7 +4038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Caja
   quienEmpuja: 1
   quienMuere: 0
-  teclaEmpujar: 38
+  teclaEmpujar: 32
   velocidadCaja: 15
   capaWall:
     serializedVersion: 2
@@ -4461,7 +4461,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Caja
   quienEmpuja: 1
   quienMuere: 0
-  teclaEmpujar: 38
+  teclaEmpujar: 32
   velocidadCaja: 15
   capaWall:
     serializedVersion: 2
@@ -4693,7 +4693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Caja
   quienEmpuja: 1
   quienMuere: 0
-  teclaEmpujar: 38
+  teclaEmpujar: 32
   velocidadCaja: 15
   capaWall:
     serializedVersion: 2
@@ -7190,7 +7190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Caja
   quienEmpuja: 1
   quienMuere: 0
-  teclaEmpujar: 38
+  teclaEmpujar: 32
   velocidadCaja: 15
   capaWall:
     serializedVersion: 2
@@ -8304,7 +8304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Caja
   quienEmpuja: 1
   quienMuere: 0
-  teclaEmpujar: 23
+  teclaEmpujar: 32
   velocidadCaja: 15
   capaWall:
     serializedVersion: 2

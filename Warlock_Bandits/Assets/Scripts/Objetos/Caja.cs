@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -24,6 +25,12 @@ public class Caja : MonoBehaviour
     [SerializeField] private LayerMask capaSuelo = ~0;
     [SerializeField] private float margenSuelo = 0.05f;
 
+    [Header("Agua")]
+    // Una caja hundida en el agua hace de puente: no se empuja y las demas pasan por encima
+    [SerializeField] private string tagAgua = "BadWater";
+    // Cuanto puede subir una caja para pasar sobre otra hundida (fraccion de su altura)
+    [SerializeField] private float escalonMaximo = 0.4f;
+
     [Header("Evento de muerte")]
     [SerializeField] private UnityEvent alMorirPersonaje;
 
@@ -34,6 +41,7 @@ public class Caja : MonoBehaviour
     private bool apoyada;
     // Ultimo paso de fisica en el que otra caja empujo a esta
     private float tiempoEmpujada = -1f;
+    private bool enAgua;
 
     private readonly RaycastHit2D[] resultados =
         new RaycastHit2D[16];
@@ -112,6 +120,7 @@ public class Caja : MonoBehaviour
         }
 
         bool puedeMover =
+            !enAgua &&
             banditTocando != null &&
             Keyboard.current[teclaEmpujar].isPressed;
 
@@ -149,6 +158,8 @@ public class Caja : MonoBehaviour
 
     void Mover(float direccion)
     {
+        SubirSobreCajaEnAgua(direccion);
+
         rb.constraints =
             RigidbodyConstraints2D.FreezeRotation |
             BloqueoY();
@@ -189,13 +200,52 @@ public class Caja : MonoBehaviour
         {
             Caja otra = resultados[i].collider.GetComponentInParent<Caja>();
 
-            // Solo cuenta si de verdad esta delante, para no volver a la caja de atras
-            if (otra != null && otra != this &&
+            // Solo cuenta si de verdad esta delante, para no volver a la caja de atras.
+            // Las hundidas en el agua no se empujan
+            if (otra != null && otra != this && !otra.enAgua &&
                 (otra.transform.position.x - transform.position.x) * direccion > 0f)
                 return otra;
         }
 
         return null;
+    }
+
+    // Si delante hay una caja hundida poco mas alta que la base de esta, la sube encima
+    void SubirSobreCajaEnAgua(float direccion)
+    {
+        ContactFilter2D filtro = new ContactFilter2D();
+
+        filtro.useTriggers = false;
+
+        float distancia =
+            velocidadCaja * Time.fixedDeltaTime +
+            margenPared;
+
+        int cantidad = colliderCaja.Cast(
+            new Vector2(direccion, 0f),
+            filtro,
+            resultados,
+            distancia
+        );
+
+        Bounds limites = colliderCaja.bounds;
+        float subidaMaxima = limites.size.y * escalonMaximo;
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            Caja otra = resultados[i].collider.GetComponentInParent<Caja>();
+
+            if (otra == null || otra == this || !otra.enAgua)
+                continue;
+
+            float subida = otra.colliderCaja.bounds.max.y - limites.min.y;
+
+            if (subida > 0f && subida <= subidaMaxima)
+            {
+                rb.position += new Vector2(0f, subida + margenPared);
+                return;
+            }
+        }
     }
 
     bool HayPared(float direccion)
@@ -292,11 +342,26 @@ public class Caja : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         DetectarWarlock(other);
+        DetectarAgua(other);
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
         DetectarWarlock(other);
+        DetectarAgua(other);
+    }
+
+    // Esta en el agua cuando su centro queda dentro, asi rozar la superficie no cuenta
+    void DetectarAgua(Collider2D other)
+    {
+        if (EsAgua(other))
+            enAgua = other.OverlapPoint(colliderCaja.bounds.center);
+    }
+
+    // Solo el tilemap es el agua; la capsula del mismo objeto es el rango de la habilidad
+    bool EsAgua(Collider2D other)
+    {
+        return other is TilemapCollider2D && other.CompareTag(tagAgua);
     }
 
     void DetectarWarlock(Collider2D other)
@@ -312,6 +377,10 @@ public class Caja : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
+        if (EsAgua(other) &&
+            !other.OverlapPoint(colliderCaja.bounds.center))
+            enAgua = false;
+
         WizardController wizard =
             other.GetComponentInParent<WizardController>();
 
