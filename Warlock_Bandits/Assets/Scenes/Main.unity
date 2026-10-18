@@ -619,6 +619,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   sonidoSalto: {fileID: 8300000, guid: 66b6a49b8e8565d48b2b3d7508829eef, type: 3}
   volumenSalto: 0.15
+  sonidoCaminar: {fileID: 8300000, guid: 970660fd90885e94783c5da7597d1c4e, type: 3}
+  volumenCaminar: 0.2
 --- !u!50 &1535543091
 Rigidbody2D:
   serializedVersion: 5

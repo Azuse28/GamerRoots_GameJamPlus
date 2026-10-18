@@ -29,14 +29,20 @@ public class WizardController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    // NUEVO: SONIDO DE SALTO
     [Header("Sonidos")]
     [SerializeField] private AudioClip sonidoSalto;
 
     [Range(0f, 1f)]
     [SerializeField] private float volumenSalto = 0.15f;
 
+    // NUEVO: SONIDO DE CAMINAR
+    [SerializeField] private AudioClip sonidoCaminar;
+
+    [Range(0f, 1f)]
+    [SerializeField] private float volumenCaminar = 0.2f;
+
     private AudioSource audioSource;
+    private AudioSource audioPasos;
 
     private const string ANIM_IDLE = "Warlock_idle";
     private const string ANIM_WALK = "Warlock_walk";
@@ -71,8 +77,17 @@ public class WizardController : MonoBehaviour
         if (spriteRenderer == null)
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
-        // NUEVO: Obtener AudioSource del Warlock
+        // AudioSource original para salto
         audioSource = GetComponent<AudioSource>();
+
+        // NUEVO: AudioSource independiente para caminar
+        audioPasos = gameObject.AddComponent<AudioSource>();
+
+        audioPasos.clip = sonidoCaminar;
+        audioPasos.loop = true;
+        audioPasos.playOnAwake = false;
+        audioPasos.volume = volumenCaminar;
+        audioPasos.spatialBlend = 0f;
     }
 
     void Start()
@@ -90,7 +105,10 @@ public class WizardController : MonoBehaviour
             contadorBuffer -= Time.deltaTime;
 
         if (Keyboard.current == null)
+        {
+            DetenerSonidoCaminar();
             return;
+        }
 
         // MOVIMIENTO HORIZONTAL
 
@@ -141,6 +159,12 @@ public class WizardController : MonoBehaviour
         // CONTROLAR ANIMACIONES
 
         ActualizarAnimaciones();
+
+        // Detener los pasos al soltar las teclas
+        if (Mathf.Abs(movimientoX) <= 0.01f)
+        {
+            DetenerSonidoCaminar();
+        }
     }
 
     // CAMBIAR ANIMACION SIN REINICIARLA
@@ -212,6 +236,8 @@ public class WizardController : MonoBehaviour
         float escalaBase =
             gravedad / Mathf.Abs(Physics2D.gravity.y);
 
+        // MOVIMIENTO EN ESCALERA
+
         if (enEscalera)
         {
             rb.gravityScale = 0f;
@@ -220,6 +246,9 @@ public class WizardController : MonoBehaviour
                 movimientoX * velocidad,
                 movimientoY * velocidadEscalera
             );
+
+            // NUEVO: Detener pasos en escaleras
+            DetenerSonidoCaminar();
 
             return;
         }
@@ -247,7 +276,11 @@ public class WizardController : MonoBehaviour
             contadorCoyote = 0f;
             contadorSaltoReciente = 0.1f;
 
-            // NUEVO: REPRODUCIR SONIDO DE SALTO
+            // NUEVO: Detener sonido de caminar al saltar
+            enSuelo = false;
+            DetenerSonidoCaminar();
+
+            // SONIDO DE SALTO
             if (audioSource != null && sonidoSalto != null)
             {
                 audioSource.PlayOneShot(
@@ -276,6 +309,49 @@ public class WizardController : MonoBehaviour
             movimientoX * velocidad,
             Mathf.Max(velocidadY, -velocidadMaxCaida)
         );
+
+        // NUEVO: CONTROLAR SONIDO DE CAMINAR
+        ReproducirSonidoCaminar();
+    }
+
+    // NUEVO: REPRODUCIR SONIDO DE CAMINAR
+
+    void ReproducirSonidoCaminar()
+    {
+        bool estaCaminando =
+            enSuelo &&
+            !enEscalera &&
+            Mathf.Abs(movimientoX) > 0.01f &&
+            Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+
+        if (estaCaminando)
+        {
+            if (audioPasos != null &&
+                audioPasos.clip != null &&
+                !audioPasos.isPlaying)
+            {
+                audioPasos.Play();
+            }
+        }
+        else
+        {
+            DetenerSonidoCaminar();
+        }
+    }
+
+    // NUEVO: DETENER SONIDO DE CAMINAR
+
+    void DetenerSonidoCaminar()
+    {
+        if (audioPasos != null && audioPasos.isPlaying)
+        {
+            audioPasos.Stop();
+        }
+    }
+
+    void OnDisable()
+    {
+        DetenerSonidoCaminar();
     }
 
     // DETECCION DE SUELO
@@ -340,6 +416,9 @@ public class WizardController : MonoBehaviour
             escalerasTocando++;
             enEscalera = true;
             contadorBuffer = 0f;
+
+            // NUEVO: Detener pasos al entrar en escalera
+            DetenerSonidoCaminar();
         }
     }
 
