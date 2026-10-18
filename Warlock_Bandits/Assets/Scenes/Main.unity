@@ -481,7 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WizardController
   velocidad: 35
   fuerzaSalto: 23
-  velocidadEscalera: 5
+  velocidadEscalera: 15
 --- !u!50 &1535543091
 Rigidbody2D:
   serializedVersion: 5
