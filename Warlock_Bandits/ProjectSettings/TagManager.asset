@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - Ladder
   - box
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Ground
   - BadWater
   - Player
-  - 
-  - 
+  - box
+  - Wall
   - 
   - 
   - 

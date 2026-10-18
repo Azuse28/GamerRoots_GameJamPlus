@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class Caja : MonoBehaviour
 {
     public TipoPersonaje quienEmpuja = TipoPersonaje.Bandit;
@@ -11,13 +12,25 @@ public class Caja : MonoBehaviour
 
     [SerializeField] private float velocidadCaja = 8f;
 
+    [Header("Deteccion de paredes")]
+    [SerializeField] private LayerMask capaWall;
+    [SerializeField] private float margenPared = 0.02f;
+
     private Rigidbody2D rb;
+    private Collider2D colliderCaja;
     private Personaje banditTocando;
+
+    private readonly RaycastHit2D[] resultados =
+        new RaycastHit2D[16];
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        colliderCaja = GetComponent<Collider2D>();
+
         rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = 3f;
+
         Bloquear();
     }
 
@@ -29,11 +42,9 @@ public class Caja : MonoBehaviour
             return;
         }
 
-        bool teclaPulsada =
-            Keyboard.current[teclaEmpujar].isPressed;
-
         bool puedeMover =
-            banditTocando != null && teclaPulsada;
+            banditTocando != null &&
+            Keyboard.current[teclaEmpujar].isPressed;
 
         float movimientoX = 0f;
 
@@ -48,20 +59,46 @@ public class Caja : MonoBehaviour
 
         if (puedeMover && movimientoX != 0f)
         {
-            Desbloquear();
+            if (!HayPared(movimientoX))
+            {
+                rb.constraints =
+                    RigidbodyConstraints2D.FreezeRotation;
 
-            rb.MovePosition(
-                rb.position + new Vector2(
-                    movimientoX * velocidadCaja *
-                    Time.fixedDeltaTime,
-                    0f
-                )
-            );
+                rb.linearVelocity = new Vector2(
+                    movimientoX * velocidadCaja,
+                    rb.linearVelocity.y
+                );
+            }
+            else
+            {
+                Bloquear();
+            }
         }
         else
         {
             Bloquear();
         }
+    }
+
+    bool HayPared(float direccion)
+    {
+        ContactFilter2D filtro = new ContactFilter2D();
+
+        filtro.SetLayerMask(capaWall);
+        filtro.useTriggers = false;
+
+        float distancia =
+            velocidadCaja * Time.fixedDeltaTime +
+            margenPared;
+
+        int cantidad = colliderCaja.Cast(
+            new Vector2(direccion, 0f),
+            filtro,
+            resultados,
+            distancia
+        );
+
+        return cantidad > 0;
     }
 
     void OnCollisionEnter2D(Collision2D colision)
@@ -101,11 +138,6 @@ public class Caja : MonoBehaviour
 
     void Bloquear()
     {
-        if (rb.bodyType != RigidbodyType2D.Dynamic)
-        {
-            rb.bodyType = RigidbodyType2D.Dynamic;
-        }
-
         rb.constraints =
             RigidbodyConstraints2D.FreezePositionX |
             RigidbodyConstraints2D.FreezeRotation;
@@ -114,17 +146,5 @@ public class Caja : MonoBehaviour
             0f,
             rb.linearVelocity.y
         );
-    }
-
-    void Desbloquear()
-    {
-        rb.bodyType = RigidbodyType2D.Kinematic;
-
-        rb.useFullKinematicContacts = true;
-
-        // Importante: liberar X para permitir MovePosition
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-
-        rb.linearVelocity = Vector2.zero;
     }
 }
