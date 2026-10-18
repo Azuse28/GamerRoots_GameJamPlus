@@ -19,6 +19,11 @@ public class Caja : MonoBehaviour
     [SerializeField] private LayerMask capaWall;
     [SerializeField] private float margenPared = 0.02f;
 
+    [Header("Deteccion de suelo")]
+    // Mientras esta apoyada se congela Y, para que los personajes no la arrastren al saltar
+    [SerializeField] private LayerMask capaSuelo = ~0;
+    [SerializeField] private float margenSuelo = 0.05f;
+
     [Header("Evento de muerte")]
     [SerializeField] private UnityEvent alMorirPersonaje;
 
@@ -26,6 +31,7 @@ public class Caja : MonoBehaviour
     private BoxCollider2D colliderCaja;
     private CircleCollider2D rangoMuerte;
     private Personaje banditTocando;
+    private bool apoyada;
 
     private readonly RaycastHit2D[] resultados =
         new RaycastHit2D[16];
@@ -82,6 +88,8 @@ public class Caja : MonoBehaviour
 
     void FixedUpdate()
     {
+        apoyada = HaySueloDebajo();
+
         if (Keyboard.current == null)
         {
             Bloquear();
@@ -108,7 +116,8 @@ public class Caja : MonoBehaviour
             if (!HayPared(movimientoX))
             {
                 rb.constraints =
-                    RigidbodyConstraints2D.FreezeRotation;
+                    RigidbodyConstraints2D.FreezeRotation |
+                    BloqueoY();
 
                 rb.linearVelocity = new Vector2(
                     movimientoX * velocidadCaja,
@@ -145,6 +154,37 @@ public class Caja : MonoBehaviour
         );
 
         return cantidad > 0;
+    }
+
+    bool HaySueloDebajo()
+    {
+        ContactFilter2D filtro = new ContactFilter2D();
+
+        filtro.SetLayerMask(capaSuelo);
+        filtro.useTriggers = false;
+
+        int cantidad = colliderCaja.Cast(
+            Vector2.down,
+            filtro,
+            resultados,
+            margenSuelo
+        );
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            // Los personajes no cuentan como suelo
+            if (resultados[i].collider.GetComponentInParent<Personaje>() == null)
+                return true;
+        }
+
+        return false;
+    }
+
+    RigidbodyConstraints2D BloqueoY()
+    {
+        return apoyada
+            ? RigidbodyConstraints2D.FreezePositionY
+            : RigidbodyConstraints2D.None;
     }
 
     // COLISIONES FISICAS DE BANDIT
@@ -236,7 +276,8 @@ public class Caja : MonoBehaviour
     {
         rb.constraints =
             RigidbodyConstraints2D.FreezePositionX |
-            RigidbodyConstraints2D.FreezeRotation;
+            RigidbodyConstraints2D.FreezeRotation |
+            BloqueoY();
 
         rb.linearVelocity = new Vector2(
             0f,
