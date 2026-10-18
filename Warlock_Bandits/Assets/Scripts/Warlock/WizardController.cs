@@ -60,26 +60,26 @@ public class WizardController : MonoBehaviour
         if (Keyboard.current == null)
             return;
 
-        if (Keyboard.current.jKey.isPressed)
+        if (Keyboard.current.leftArrowKey.isPressed)
             movimientoX = -1f;
 
-        if (Keyboard.current.lKey.isPressed)
+        if (Keyboard.current.rightArrowKey.isPressed)
             movimientoX = 1f;
 
         if (enEscalera)
         {
-            if (Keyboard.current.iKey.isPressed)
+            if (Keyboard.current.upArrowKey.isPressed)
                 movimientoY = 1f;
 
-            if (Keyboard.current.kKey.isPressed)
+            if (Keyboard.current.downArrowKey.isPressed)
                 movimientoY = -1f;
         }
         else
         {
-            if (Keyboard.current.iKey.wasPressedThisFrame)
+            if (Keyboard.current.upArrowKey.wasPressedThisFrame)
                 contadorBuffer = jumpBuffer;
 
-            mantieneSalto = Keyboard.current.iKey.isPressed;
+            mantieneSalto = Keyboard.current.upArrowKey.isPressed;
         }
     }
 
