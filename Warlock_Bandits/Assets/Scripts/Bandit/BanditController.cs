@@ -28,6 +28,11 @@ public class BanditController : MonoBehaviour
     // Tags sobre los que se puede estar de pie (el suelo y las cajas)
     [SerializeField] private string[] tagsSuelo = { "Ground", "box" };
 
+    [Header("Sonidos")]
+    [SerializeField] private AudioClip sonidoSalto;
+
+    private AudioSource audioSource;
+
     private Rigidbody2D rb;
     private Collider2D col;
     private float movimientoX;
@@ -46,6 +51,8 @@ public class BanditController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -88,6 +95,7 @@ public class BanditController : MonoBehaviour
         return 2f * alturaSalto / (tiempoHastaCima * tiempoHastaCima);
     }
 
+
     void FixedUpdate()
     {
         float gravedad = CalcularGravedad();
@@ -122,6 +130,12 @@ public class BanditController : MonoBehaviour
             contadorBuffer = 0f;
             contadorCoyote = 0f;
             contadorSaltoReciente = 0.1f;
+
+            // ÚNICO CAMBIO: reproducir sonido al ejecutar el salto
+            if (audioSource != null && sonidoSalto != null)
+            {
+                audioSource.PlayOneShot(sonidoSalto, 0.15f);
+            }
         }
 
         // Cae más rápido de lo que sube, y si suelta la tecla el salto se corta
@@ -139,6 +153,7 @@ public class BanditController : MonoBehaviour
             Mathf.Max(velocidadY, -velocidadMaxCaida)
         );
     }
+
 
     bool DetectarSuelo()
     {
