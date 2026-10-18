@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 173547792}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1588.8, y: 72.4, z: 0}
+  m_LocalPosition: {x: -1461.2, y: 115.9, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -475,7 +475,7 @@ Transform:
   m_GameObject: {fileID: 1535543088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1596.9, y: 70.3, z: 0}
+  m_LocalPosition: {x: -1472, y: 111, z: 0}
   m_LocalScale: {x: 11, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -495,8 +495,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WizardController
   velocidad: 35
-  fuerzaSalto: 12
   velocidadEscalera: 15
+  alturaSalidaEscalera: 4
+  alturaSalto: 11
+  tiempoHastaCima: 0.38
+  multiplicadorCaida: 1.8
+  multiplicadorSaltoCorto: 2.5
+  velocidadMaxCaida: 65
+  coyoteTime: 0.1
+  jumpBuffer: 0.12
+  groundCheck: {fileID: 0}
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  altoCheckSuelo: 0.3
+  tagsSuelo:
+  - Ground
+  - box
 --- !u!50 &1535543091
 Rigidbody2D:
   serializedVersion: 5

@@ -27,6 +27,7 @@ public class waterscripts : MonoBehaviour
 
     private TilemapCollider2D colliderAgua;
     private CapsuleCollider2D rangoHabilidad;
+    private Tilemap tilemap;
     private Coroutine temporizador;
 
     private readonly HashSet<GameObject> personajesEliminados =
@@ -49,10 +50,15 @@ public class waterscripts : MonoBehaviour
 
         colliderAgua = GetComponent<TilemapCollider2D>();
         rangoHabilidad = GetComponent<CapsuleCollider2D>();
+        tilemap = GetComponent<Tilemap>();
 
-        // Ambos detectan contacto sin bloquear
-        colliderAgua.isTrigger = true;
+        // El Capsule siempre detecta proximidad
         rangoHabilidad.isTrigger = true;
+
+        // Liquida = atravesable
+        // Congelada = solida
+        colliderAgua.isTrigger =
+            estadoActual == EstadoAgua.Liquida;
 
         if (GetComponent<BoxCollider2D>() != null)
         {
@@ -62,6 +68,7 @@ public class waterscripts : MonoBehaviour
             );
 
             enabled = false;
+            return;
         }
     }
 
@@ -70,11 +77,9 @@ public class waterscripts : MonoBehaviour
         if (Keyboard.current == null)
             return;
 
-        // Solo activar cuando se presiona I
         if (!Keyboard.current.iKey.wasPressedThisFrame)
             return;
 
-        // Comprobar si hay un Warlock dentro del rango
         foreach (WizardController wizard in magosEnRango)
         {
             if (wizard != null)
@@ -102,7 +107,6 @@ public class waterscripts : MonoBehaviour
 
         if (wizard != null)
         {
-            // Solo quitarlo si ya no está dentro del Capsule
             if (!rangoHabilidad.IsTouching(other))
             {
                 magosEnRango.Remove(wizard);
@@ -115,7 +119,7 @@ public class waterscripts : MonoBehaviour
         WizardController wizard =
             other.GetComponentInParent<WizardController>();
 
-        // Detectar proximidad al agua
+        // Detectar si Warlock está cerca del agua
         if (wizard != null)
         {
             if (rangoHabilidad.IsTouching(other))
@@ -124,7 +128,7 @@ public class waterscripts : MonoBehaviour
             }
         }
 
-        // Solo el Tilemap activa la muerte
+        // La muerte solo ocurre al tocar el Tilemap
         if (!colliderAgua.IsTouching(other))
             return;
 
@@ -138,6 +142,7 @@ public class waterscripts : MonoBehaviour
 
         if (bandit != null)
         {
+            // Bandit solo muere con agua líquida
             if (estadoActual == EstadoAgua.Liquida)
             {
                 EliminarPersonaje(bandit.gameObject);
@@ -148,6 +153,31 @@ public class waterscripts : MonoBehaviour
 
         WizardController wizard =
             other.GetComponentInParent<WizardController>();
+
+        if (wizard != null)
+        {
+            EliminarPersonaje(wizard.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        VerificarColision(collision);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        VerificarColision(collision);
+    }
+
+    private void VerificarColision(Collision2D collision)
+    {
+        // Warlock sigue muriendo si toca el agua congelada
+        if (estadoActual != EstadoAgua.Congelada)
+            return;
+
+        WizardController wizard =
+            collision.collider.GetComponentInParent<WizardController>();
 
         if (wizard != null)
         {
@@ -183,11 +213,28 @@ public class waterscripts : MonoBehaviour
     {
         estadoActual = EstadoAgua.Congelada;
 
-        Debug.Log("Agua congelada");
+        // El agua se vuelve sólida
+        colliderAgua.isTrigger = false;
+
+        // Color del agua congelada
+        tilemap.color = new Color(1f, 1f, 1f, 1f);
+
+        Debug.Log("Agua congelada - superficie sólida");
 
         yield return new WaitForSeconds(duracionCongelada);
 
         estadoActual = EstadoAgua.Liquida;
+
+        // El agua vuelve a ser atravesable
+        colliderAgua.isTrigger = true;
+
+        // Color original del agua líquida
+        tilemap.color = new Color(
+            0.212f,
+            0.898f,
+            0.2f,
+            1f
+        );
 
         Debug.Log("Agua líquida nuevamente");
 
