@@ -1,3 +1,4 @@
+
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -39,6 +40,16 @@ public class BanditController : MonoBehaviour
     [SerializeField] private AudioClip sonidoCaminar;
     [SerializeField] private float volumenCaminar = 0.2f;
 
+    // NUEVO: ANIMACIONES
+    [Header("Animaciones")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    private const string ANIM_IDLE = "Bandit_idle";
+    private const string ANIM_WALK = "Bandit_walk";
+
+    private string animacionActual = "";
+
     private AudioSource audioSource;
     private AudioSource audioPasos;
 
@@ -63,6 +74,13 @@ public class BanditController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
 
+        // NUEVO: Obtener componentes de animacion
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
         // AudioSource original para el salto
         audioSource = GetComponent<AudioSource>();
 
@@ -76,6 +94,12 @@ public class BanditController : MonoBehaviour
         audioPasos.spatialBlend = 0f;
     }
 
+    // NUEVO: Iniciar animacion Idle
+    void Start()
+    {
+        CambiarAnimacion(ANIM_IDLE);
+    }
+
     void Update()
     {
         movimientoX = 0f;
@@ -86,7 +110,10 @@ public class BanditController : MonoBehaviour
             contadorBuffer -= Time.deltaTime;
 
         if (Keyboard.current == null)
+        {
+            ActualizarAnimaciones();
             return;
+        }
 
         // MOVIMIENTO HORIZONTAL
 
@@ -95,6 +122,22 @@ public class BanditController : MonoBehaviour
 
         if (Keyboard.current.dKey.isPressed)
             movimientoX = 1f;
+
+        // NUEVO: VOLTEAR SPRITE SEGUN DIRECCION
+
+        if (spriteRenderer != null)
+        {
+            if (movimientoX < 0f)
+            {
+                // Mirar a la izquierda
+                spriteRenderer.flipX = true;
+            }
+            else if (movimientoX > 0f)
+            {
+                // Mirar a la derecha
+                spriteRenderer.flipX = false;
+            }
+        }
 
         // ESCALERAS Y SALTO
 
@@ -113,6 +156,44 @@ public class BanditController : MonoBehaviour
 
             mantieneSalto =
                 Keyboard.current.wKey.isPressed;
+        }
+
+        // NUEVO: CONTROLAR ANIMACIONES
+        ActualizarAnimaciones();
+    }
+
+    // NUEVO: CAMBIAR ANIMACION SIN REINICIARLA
+
+    void CambiarAnimacion(string nombre)
+    {
+        if (animator == null)
+            return;
+
+        if (animacionActual == nombre)
+            return;
+
+        animacionActual = nombre;
+
+        animator.Play(nombre, 0, 0f);
+    }
+
+    // NUEVO: ACTUALIZAR IDLE Y WALK
+
+    void ActualizarAnimaciones()
+    {
+        if (animator == null)
+            return;
+
+        bool caminando =
+            movimientoX != 0f || movimientoY != 0f;
+
+        if (caminando)
+        {
+            CambiarAnimacion(ANIM_WALK);
+        }
+        else
+        {
+            CambiarAnimacion(ANIM_IDLE);
         }
     }
 
@@ -140,7 +221,7 @@ public class BanditController : MonoBehaviour
                 movimientoY * velocidadEscalera
             );
 
-            // Detener pasos mientras está en escalera
+            // Detener pasos mientras esta en escalera
             DetenerSonidoCaminar();
 
             return;
@@ -221,7 +302,7 @@ public class BanditController : MonoBehaviour
 
         if (estaCaminando)
         {
-            // Reproducir únicamente si no está sonando
+            // Reproducir unicamente si no esta sonando
             if (audioPasos != null &&
                 audioPasos.clip != null &&
                 !audioPasos.isPlaying)
