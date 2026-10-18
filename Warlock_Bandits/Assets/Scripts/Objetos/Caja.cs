@@ -32,6 +32,8 @@ public class Caja : MonoBehaviour
     private CircleCollider2D rangoMuerte;
     private Personaje banditTocando;
     private bool apoyada;
+    // Ultimo paso de fisica en el que otra caja empujo a esta
+    private float tiempoEmpujada = -1f;
 
     private readonly RaycastHit2D[] resultados =
         new RaycastHit2D[16];
@@ -99,6 +101,10 @@ public class Caja : MonoBehaviour
     {
         apoyada = HaySueloDebajo();
 
+        // Si otra caja ya la empujo en este paso, no se bloquea
+        if (tiempoEmpujada == Time.fixedTime)
+            return;
+
         if (Keyboard.current == null)
         {
             Bloquear();
@@ -120,28 +126,76 @@ public class Caja : MonoBehaviour
                 movimientoX = 1f;
         }
 
-        if (puedeMover && movimientoX != 0f)
+        if (puedeMover && movimientoX != 0f && PuedeAvanzar(movimientoX))
         {
-            if (!HayPared(movimientoX))
-            {
-                rb.constraints =
-                    RigidbodyConstraints2D.FreezeRotation |
-                    BloqueoY();
-
-                rb.linearVelocity = new Vector2(
-                    movimientoX * velocidadCaja,
-                    rb.linearVelocity.y
-                );
-            }
-            else
-            {
-                Bloquear();
-            }
+            Mover(movimientoX);
         }
         else
         {
             Bloquear();
         }
+    }
+
+    // Solo avanza si ni esta caja ni las que tiene delante chocan con una pared
+    bool PuedeAvanzar(float direccion)
+    {
+        if (HayPared(direccion))
+            return false;
+
+        Caja cajaDelante = CajaDelante(direccion);
+
+        return cajaDelante == null || cajaDelante.PuedeAvanzar(direccion);
+    }
+
+    void Mover(float direccion)
+    {
+        rb.constraints =
+            RigidbodyConstraints2D.FreezeRotation |
+            BloqueoY();
+
+        rb.linearVelocity = new Vector2(
+            direccion * velocidadCaja,
+            rb.linearVelocity.y
+        );
+
+        // Empuja en cadena a la caja que tenga delante
+        Caja cajaDelante = CajaDelante(direccion);
+
+        if (cajaDelante != null)
+        {
+            cajaDelante.tiempoEmpujada = Time.fixedTime;
+            cajaDelante.Mover(direccion);
+        }
+    }
+
+    Caja CajaDelante(float direccion)
+    {
+        ContactFilter2D filtro = new ContactFilter2D();
+
+        filtro.useTriggers = false;
+
+        float distancia =
+            velocidadCaja * Time.fixedDeltaTime +
+            margenPared;
+
+        int cantidad = colliderCaja.Cast(
+            new Vector2(direccion, 0f),
+            filtro,
+            resultados,
+            distancia
+        );
+
+        for (int i = 0; i < cantidad; i++)
+        {
+            Caja otra = resultados[i].collider.GetComponentInParent<Caja>();
+
+            // Solo cuenta si de verdad esta delante, para no volver a la caja de atras
+            if (otra != null && otra != this &&
+                (otra.transform.position.x - transform.position.x) * direccion > 0f)
+                return otra;
+        }
+
+        return null;
     }
 
     bool HayPared(float direccion)
