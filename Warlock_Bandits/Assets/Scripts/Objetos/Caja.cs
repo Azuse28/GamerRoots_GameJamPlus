@@ -56,6 +56,15 @@ public class Caja : MonoBehaviour
         // La caja tiene colision fisica
         colliderCaja.isTrigger = false;
 
+        // Sin friccion, para que los personajes no la arrastren hacia arriba al saltar a su lado.
+        // Minimum hace que el 0 gane al combinarse con el material de cualquier otro collider
+        colliderCaja.sharedMaterial = new PhysicsMaterial2D("CajaSinFriccion")
+        {
+            friction = 0f,
+            bounciness = 0f,
+            frictionCombine = PhysicsMaterialCombine2D.Minimum
+        };
+
         // El circulo solamente detecta personajes
         rangoMuerte.isTrigger = true;
 
