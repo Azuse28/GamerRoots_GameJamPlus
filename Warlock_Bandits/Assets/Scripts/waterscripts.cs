@@ -16,7 +16,7 @@ public class waterscripts : MonoBehaviour
         Congelada
     }
 
-    [Header("Configuración del agua")]
+    [Header("Configuraciï¿½n del agua")]
     [SerializeField] private EstadoAgua estadoActual = EstadoAgua.Liquida;
     [SerializeField] private float duracionCongelada = 10f;
 
@@ -199,6 +199,9 @@ public class waterscripts : MonoBehaviour
         alMorirPersonaje?.Invoke();
 
         Destroy(personaje);
+
+        if (DirectorEscenas.Instancia != null)
+            DirectorEscenas.Instancia.IrAGameOver();
     }
 
     [ContextMenu("Congelar agua")]

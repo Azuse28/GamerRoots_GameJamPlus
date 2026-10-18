@@ -11,7 +11,7 @@ public class Caja : MonoBehaviour
 {
     public TipoPersonaje quienEmpuja = TipoPersonaje.Bandit;
     public TipoPersonaje quienMuere = TipoPersonaje.Warlock;
-    public Key teclaEmpujar = Key.X;
+    public Key teclaEmpujar = Key.R;
 
     [SerializeField] private float velocidadCaja = 8f;
 
