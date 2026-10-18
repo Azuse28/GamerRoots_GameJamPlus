@@ -1,0 +1,1302 @@
+fileFormatVersion: 2
+guid: 3e5319bfbef278a47bf6ec9f55329de9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4100526526943112236
+    second: Continue buttom_0
+  - first:
+      213: -3183453433801982884
+    second: Continue buttom_1
+  - first:
+      213: 8112969085167347695
+    second: Continue buttom_2
+  - first:
+      213: 5256407864564566022
+    second: Continue buttom_3
+  - first:
+      213: 4111616453339251900
+    second: Continue buttom_4
+  - first:
+      213: 7836827171282717642
+    second: Continue buttom_5
+  - first:
+      213: -5122695491581769231
+    second: Continue buttom_6
+  - first:
+      213: 4796375274349763383
+    second: Continue buttom_7
+  - first:
+      213: -8371474688968637036
+    second: Continue buttom_8
+  - first:
+      213: -8434072720765515161
+    second: Continue buttom_9
+  - first:
+      213: 3335974427752273645
+    second: Continue buttom_10
+  - first:
+      213: -515749485421154823
+    second: Continue buttom_11
+  - first:
+      213: 3441249786459606118
+    second: Continue buttom_12
+  - first:
+      213: 2048816311712609200
+    second: Continue buttom_13
+  - first:
+      213: -1984816180923032595
+    second: Continue buttom_14
+  - first:
+      213: 4616289000485156859
+    second: Continue buttom_15
+  - first:
+      213: 2219241725163291198
+    second: Continue buttom_16
+  - first:
+      213: -7148645012579276147
+    second: Continue buttom_17
+  - first:
+      213: 5794848748803510874
+    second: Continue buttom_18
+  - first:
+      213: 5823335177917365793
+    second: Continue buttom_19
+  - first:
+      213: 833856636036789302
+    second: Continue buttom_20
+  - first:
+      213: 9174919105160769639
+    second: Continue buttom_21
+  - first:
+      213: 8411406522106302135
+    second: Continue buttom_22
+  - first:
+      213: 7015819611274192089
+    second: Continue buttom_23
+  - first:
+      213: 246022030481446369
+    second: Continue buttom_24
+  - first:
+      213: 2794769613271763195
+    second: Continue buttom_25
+  - first:
+      213: 3005419349808606616
+    second: Continue buttom_26
+  - first:
+      213: 661960484199828554
+    second: Continue buttom_27
+  - first:
+      213: 1551013808065033991
+    second: Continue buttom_28
+  - first:
+      213: 5310599105355035839
+    second: Continue buttom_29
+  - first:
+      213: 4937154549499550723
+    second: Continue buttom_30
+  - first:
+      213: 2272014147215131696
+    second: Continue buttom_31
+  - first:
+      213: 2965091880736214867
+    second: Continue buttom_32
+  - first:
+      213: -423883725853768140
+    second: Continue buttom_33
+  - first:
+      213: -4353869397108417088
+    second: Continue buttom_34
+  - first:
+      213: -5733304191528932951
+    second: Continue buttom_35
+  - first:
+      213: -1937889183880121933
+    second: Continue buttom_36
+  - first:
+      213: 3079962781780388322
+    second: Continue buttom_37
+  - first:
+      213: -7665912418678688432
+    second: Continue buttom_38
+  - first:
+      213: 7058927224049621435
+    second: Continue buttom_39
+  - first:
+      213: 8865847695661074871
+    second: Continue buttom_40
+  - first:
+      213: 4561620158731167566
+    second: Continue buttom_41
+  - first:
+      213: -4535904658261016927
+    second: Continue buttom_42
+  - first:
+      213: 4443996024932182696
+    second: Continue buttom_43
+  - first:
+      213: -5004915052322045166
+    second: Continue buttom_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Continue buttom_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 10
+        width: 1471
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ca286962ff7e830800000000000000
+      internalID: 4100526526943112236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_1
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 450
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c3c37f7f912d3d0800000000000000
+      internalID: -3183453433801982884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 45
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe7202b066e079070800000000000000
+      internalID: 8112969085167347695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_3
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 37
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608c0f96a1382f840800000000000000
+      internalID: 5256407864564566022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_4
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 37
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb400f941656f0930800000000000000
+      internalID: 4111616453339251900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 42
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb8f6e7ac002cc60800000000000000
+      internalID: 7836827171282717642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_6
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 33
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f906c3779788e8b0800000000000000
+      internalID: -5122695491581769231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_7
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 48
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b951556e5209240800000000000000
+      internalID: 4796375274349763383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_8
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 42
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495c9d5df1c82db80800000000000000
+      internalID: -8371474688968637036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_9
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 18
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a85fccb8724fa80800000000000000
+      internalID: -8434072720765515161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_10
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 41
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de616f93113cb4e20800000000000000
+      internalID: 3335974427752273645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_11
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 41
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fda1685390b7d8f0800000000000000
+      internalID: -515749485421154823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_12
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 44
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c4051c276c1cf20800000000000000
+      internalID: 3441249786459606118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_13
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 43
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3f7a5949bde6c10800000000000000
+      internalID: 2048816311712609200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_14
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 28
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb92af03348474e0800000000000000
+      internalID: -1984816180923032595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 24
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7f576436a501040800000000000000
+      internalID: 4616289000485156859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_16
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 28
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32451b47945cce10800000000000000
+      internalID: 2219241725163291198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_17
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 33
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a28d77c39eacc90800000000000000
+      internalID: -7148645012579276147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_18
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 31
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52dc8f0c307b6050800000000000000
+      internalID: 5794848748803510874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_19
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 23
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12efccfad74a0d050800000000000000
+      internalID: 5823335177917365793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_20
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 31
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63433984134729b00800000000000000
+      internalID: 833856636036789302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_21
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 31
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7607d0ab05cd35f70800000000000000
+      internalID: 9174919105160769639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_22
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 21
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7becc839aa15bb470800000000000000
+      internalID: 8411406522106302135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_23
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 33
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d4a73ad3c23d5160800000000000000
+      internalID: 7015819611274192089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_24
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 30
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e554c5bbbb0a6300800000000000000
+      internalID: 246022030481446369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_25
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 30
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf88e1ce72409c620800000000000000
+      internalID: 2794769613271763195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_26
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 30
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d6d6aa9f465b920800000000000000
+      internalID: 3005419349808606616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_27
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 30
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c831c9d81cf2900800000000000000
+      internalID: 661960484199828554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_28
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 30
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 707317f37de468510800000000000000
+      internalID: 1551013808065033991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_29
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 25
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb4b133efb903b940800000000000000
+      internalID: 5310599105355035839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_30
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 21
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30cdf1497eb448440800000000000000
+      internalID: 4937154549499550723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_31
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 22
+        width: 28
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0348b6944d0d78f10800000000000000
+      internalID: 2272014147215131696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_32
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 11
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f4da51b5f162920800000000000000
+      internalID: 2965091880736214867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_33
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 21
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436ca664fff0e1af0800000000000000
+      internalID: -423883725853768140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_34
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 21
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd98e2e9d2f393c0800000000000000
+      internalID: -4353869397108417088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_35
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 26
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9e8a2d6363f60b0800000000000000
+      internalID: -5733304191528932951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_36
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 23
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1f0ccfd0c3b15e0800000000000000
+      internalID: -1937889183880121933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_37
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 22
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e9a179e4d93eba20800000000000000
+      internalID: 3079962781780388322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_38
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 10
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055b66d55453d9590800000000000000
+      internalID: -7665912418678688432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_39
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 11
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9dfc419e856f160800000000000000
+      internalID: 7058927224049621435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_40
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 13
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b908948181d90b70800000000000000
+      internalID: 8865847695661074871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_41
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 11
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47ae69ad512e4f30800000000000000
+      internalID: 4561620158731167566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_42
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 12
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aeff4ddeba3d01c0800000000000000
+      internalID: -4535904658261016927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_43
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 10
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aaa451e6de3cad30800000000000000
+      internalID: 4443996024932182696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Continue buttom_44
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 0
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213c65fe648fa8ab0800000000000000
+      internalID: -5004915052322045166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Continue buttom_0: 4100526526943112236
+      Continue buttom_1: -3183453433801982884
+      Continue buttom_10: 3335974427752273645
+      Continue buttom_11: -515749485421154823
+      Continue buttom_12: 3441249786459606118
+      Continue buttom_13: 2048816311712609200
+      Continue buttom_14: -1984816180923032595
+      Continue buttom_15: 4616289000485156859
+      Continue buttom_16: 2219241725163291198
+      Continue buttom_17: -7148645012579276147
+      Continue buttom_18: 5794848748803510874
+      Continue buttom_19: 5823335177917365793
+      Continue buttom_2: 8112969085167347695
+      Continue buttom_20: 833856636036789302
+      Continue buttom_21: 9174919105160769639
+      Continue buttom_22: 8411406522106302135
+      Continue buttom_23: 7015819611274192089
+      Continue buttom_24: 246022030481446369
+      Continue buttom_25: 2794769613271763195
+      Continue buttom_26: 3005419349808606616
+      Continue buttom_27: 661960484199828554
+      Continue buttom_28: 1551013808065033991
+      Continue buttom_29: 5310599105355035839
+      Continue buttom_3: 5256407864564566022
+      Continue buttom_30: 4937154549499550723
+      Continue buttom_31: 2272014147215131696
+      Continue buttom_32: 2965091880736214867
+      Continue buttom_33: -423883725853768140
+      Continue buttom_34: -4353869397108417088
+      Continue buttom_35: -5733304191528932951
+      Continue buttom_36: -1937889183880121933
+      Continue buttom_37: 3079962781780388322
+      Continue buttom_38: -7665912418678688432
+      Continue buttom_39: 7058927224049621435
+      Continue buttom_4: 4111616453339251900
+      Continue buttom_40: 8865847695661074871
+      Continue buttom_41: 4561620158731167566
+      Continue buttom_42: -4535904658261016927
+      Continue buttom_43: 4443996024932182696
+      Continue buttom_44: -5004915052322045166
+      Continue buttom_5: 7836827171282717642
+      Continue buttom_6: -5122695491581769231
+      Continue buttom_7: 4796375274349763383
+      Continue buttom_8: -8371474688968637036
+      Continue buttom_9: -8434072720765515161
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
