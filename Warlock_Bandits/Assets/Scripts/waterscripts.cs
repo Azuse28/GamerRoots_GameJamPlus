@@ -36,6 +36,10 @@ public class waterscripts : MonoBehaviour
     private readonly HashSet<WizardController> magosEnRango =
         new HashSet<WizardController>();
 
+    // Permite consultar el estado desde BanditController
+    public bool EstaCongelada =>
+        estadoActual == EstadoAgua.Congelada;
+
     private void Awake()
     {
         if (!CompareTag(TAG_AGUA))
@@ -52,24 +56,28 @@ public class waterscripts : MonoBehaviour
         rangoHabilidad = GetComponent<CapsuleCollider2D>();
         tilemap = GetComponent<Tilemap>();
 
-        // El Capsule siempre detecta proximidad
-        rangoHabilidad.isTrigger = true;
-
-        // Liquida = atravesable
-        // Congelada = solida
-        colliderAgua.isTrigger =
-            estadoActual == EstadoAgua.Liquida;
+        if (tilemap == null)
+        {
+            Debug.LogError("El objeto necesita un Tilemap.");
+            enabled = false;
+            return;
+        }
 
         if (GetComponent<BoxCollider2D>() != null)
         {
             Debug.LogError(
-                "Water todavía tiene un Box Collider 2D. " +
-                "Elimínalo."
+                "Elimina el BoxCollider2D del agua."
             );
 
             enabled = false;
             return;
         }
+
+        rangoHabilidad.isTrigger = true;
+
+        // Liquida: se atraviesa
+        // Congelada: superficie solida
+        colliderAgua.isTrigger = !EstaCongelada;
     }
 
     private void Update()
@@ -105,12 +113,10 @@ public class waterscripts : MonoBehaviour
         WizardController wizard =
             other.GetComponentInParent<WizardController>();
 
-        if (wizard != null)
+        if (wizard != null &&
+            !rangoHabilidad.IsTouching(other))
         {
-            if (!rangoHabilidad.IsTouching(other))
-            {
-                magosEnRango.Remove(wizard);
-            }
+            magosEnRango.Remove(wizard);
         }
     }
 
@@ -119,7 +125,7 @@ public class waterscripts : MonoBehaviour
         WizardController wizard =
             other.GetComponentInParent<WizardController>();
 
-        // Detectar si Warlock está cerca del agua
+        // Detectar al mago dentro del rango
         if (wizard != null)
         {
             if (rangoHabilidad.IsTouching(other))
@@ -128,37 +134,28 @@ public class waterscripts : MonoBehaviour
             }
         }
 
-        // La muerte solo ocurre al tocar el Tilemap
+        // El Capsule no mata.
+        // Solo el Tilemap activa la muerte.
         if (!colliderAgua.IsTouching(other))
             return;
-
-        VerificarPersonaje(other);
-    }
-
-    private void VerificarPersonaje(Collider2D other)
-    {
-        BanditController bandit =
-            other.GetComponentInParent<BanditController>();
-
-        if (bandit != null)
-        {
-            // Bandit solo muere con agua líquida
-            if (estadoActual == EstadoAgua.Liquida)
-            {
-                EliminarPersonaje(bandit.gameObject);
-            }
-
-            return;
-        }
-
-        WizardController wizard =
-            other.GetComponentInParent<WizardController>();
 
         if (wizard != null)
         {
             EliminarPersonaje(wizard.gameObject);
+            return;
+        }
+
+        BanditController bandit =
+            other.GetComponentInParent<BanditController>();
+
+        // Bandit solamente muere si el agua es liquida
+        if (bandit != null && !EstaCongelada)
+        {
+            EliminarPersonaje(bandit.gameObject);
         }
     }
+
+    // COLISIONES CON AGUA CONGELADA
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -172,17 +169,24 @@ public class waterscripts : MonoBehaviour
 
     private void VerificarColision(Collision2D collision)
     {
-        // Warlock sigue muriendo si toca el agua congelada
-        if (estadoActual != EstadoAgua.Congelada)
+        if (!EstaCongelada)
+            return;
+
+        // Comprobar que la colision sea con el hielo
+        if (collision.otherCollider != colliderAgua)
             return;
 
         WizardController wizard =
             collision.collider.GetComponentInParent<WizardController>();
 
+        // Warlock no puede tocar el hielo
         if (wizard != null)
         {
             EliminarPersonaje(wizard.gameObject);
         }
+
+        // Bandit y las cajas pueden apoyarse
+        // gracias al TilemapCollider2D solido.
     }
 
     private void EliminarPersonaje(GameObject personaje)
@@ -195,9 +199,6 @@ public class waterscripts : MonoBehaviour
         alMorirPersonaje?.Invoke();
 
         Destroy(personaje);
-
-        if (DirectorEscenas.Instancia != null)
-            DirectorEscenas.Instancia.IrAGameOver();
     }
 
     [ContextMenu("Congelar agua")]
@@ -216,13 +217,13 @@ public class waterscripts : MonoBehaviour
     {
         estadoActual = EstadoAgua.Congelada;
 
-        // El agua se vuelve sólida
+        // Convertir el agua en una superficie solida
         colliderAgua.isTrigger = false;
 
-        // Color del agua congelada
+        // Color del hielo
         tilemap.color = new Color(1f, 1f, 1f, 1f);
 
-        Debug.Log("Agua congelada - superficie sólida");
+        Debug.Log("Agua congelada: Bandit puede caminar sobre ella");
 
         yield return new WaitForSeconds(duracionCongelada);
 
@@ -231,7 +232,7 @@ public class waterscripts : MonoBehaviour
         // El agua vuelve a ser atravesable
         colliderAgua.isTrigger = true;
 
-        // Color original del agua líquida
+        // Color del agua liquida
         tilemap.color = new Color(
             0.212f,
             0.898f,
@@ -239,7 +240,7 @@ public class waterscripts : MonoBehaviour
             1f
         );
 
-        Debug.Log("Agua líquida nuevamente");
+        Debug.Log("Agua liquida nuevamente");
 
         temporizador = null;
     }

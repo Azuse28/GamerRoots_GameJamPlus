@@ -7,11 +7,11 @@ public class BanditController : MonoBehaviour
 {
     [SerializeField] private float velocidad = 8f;
     [SerializeField] private float velocidadEscalera = 5f;
-    // Al salir por arriba de la escalera sube esta altura extra para alcanzar la plataforma
+
+    // Altura extra al salir por arriba de la escalera
     [SerializeField] private float alturaSalidaEscalera = 4f;
 
     [Header("Salto")]
-    // La gravedad y la fuerza del salto se calculan a partir de estos dos valores
     [SerializeField] private float alturaSalto = 11f;
     [SerializeField] private float tiempoHastaCima = 0.38f;
     [SerializeField] private float multiplicadorCaida = 1.8f;
@@ -21,12 +21,17 @@ public class BanditController : MonoBehaviour
     [SerializeField] private float jumpBuffer = 0.12f;
 
     [Header("Suelo")]
-    // Opcional: si no se asigna, se usa la base del collider
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask capaSuelo = ~0;
     [SerializeField] private float altoCheckSuelo = 0.3f;
-    // Tags sobre los que se puede estar de pie (el suelo y las cajas)
-    [SerializeField] private string[] tagsSuelo = { "Ground", "box" };
+
+    // Suelo normal y cajas
+    [SerializeField]
+    private string[] tagsSuelo =
+    {
+        "Ground",
+        "box"
+    };
 
     [Header("Sonidos")]
     [SerializeField] private AudioClip sonidoSalto;
@@ -35,6 +40,7 @@ public class BanditController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Collider2D col;
+
     private float movimientoX;
     private float movimientoY;
 
@@ -42,9 +48,10 @@ public class BanditController : MonoBehaviour
     private float contadorCoyote;
     private float contadorBuffer;
     private float contadorSaltoReciente;
+
     private bool enSuelo = false;
     private bool enEscalera = false;
-    // Cuenta los triggers de escalera tocados, por si hay varios solapados
+
     private int escalerasTocando = 0;
 
     void Awake()
@@ -67,11 +74,15 @@ public class BanditController : MonoBehaviour
         if (Keyboard.current == null)
             return;
 
+        // MOVIMIENTO HORIZONTAL
+
         if (Keyboard.current.aKey.isPressed)
             movimientoX = -1f;
 
         if (Keyboard.current.dKey.isPressed)
             movimientoX = 1f;
+
+        // ESCALERAS Y SALTO
 
         if (enEscalera)
         {
@@ -86,20 +97,25 @@ public class BanditController : MonoBehaviour
             if (Keyboard.current.wKey.wasPressedThisFrame)
                 contadorBuffer = jumpBuffer;
 
-            mantieneSalto = Keyboard.current.wKey.isPressed;
+            mantieneSalto =
+                Keyboard.current.wKey.isPressed;
         }
     }
 
     float CalcularGravedad()
     {
-        return 2f * alturaSalto / (tiempoHastaCima * tiempoHastaCima);
+        return 2f * alturaSalto /
+            (tiempoHastaCima * tiempoHastaCima);
     }
-
 
     void FixedUpdate()
     {
         float gravedad = CalcularGravedad();
-        float escalaBase = gravedad / Mathf.Abs(Physics2D.gravity.y);
+
+        float escalaBase =
+            gravedad / Mathf.Abs(Physics2D.gravity.y);
+
+        // MOVIMIENTO EN ESCALERA
 
         if (enEscalera)
         {
@@ -109,11 +125,14 @@ public class BanditController : MonoBehaviour
                 movimientoX * velocidad,
                 movimientoY * velocidadEscalera
             );
+
             return;
         }
 
         if (contadorSaltoReciente > 0f)
             contadorSaltoReciente -= Time.fixedDeltaTime;
+
+        // DETECTAR SUELO, CAJAS O HIELO
 
         enSuelo = DetectarSuelo();
 
@@ -124,27 +143,39 @@ public class BanditController : MonoBehaviour
 
         float velocidadY = rb.linearVelocity.y;
 
+        // EJECUTAR SALTO
+
         if (contadorBuffer > 0f && contadorCoyote > 0f)
         {
-            velocidadY = 2f * alturaSalto / tiempoHastaCima;
+            velocidadY =
+                2f * alturaSalto / tiempoHastaCima;
+
             contadorBuffer = 0f;
             contadorCoyote = 0f;
             contadorSaltoReciente = 0.1f;
 
-            // ÚNICO CAMBIO: reproducir sonido al ejecutar el salto
+            // SONIDO DE SALTO
             if (audioSource != null && sonidoSalto != null)
             {
-                audioSource.PlayOneShot(sonidoSalto, 0.15f);
+                audioSource.PlayOneShot(
+                    sonidoSalto,
+                    0.15f
+                );
             }
         }
 
-        // Cae más rápido de lo que sube, y si suelta la tecla el salto se corta
+        // GRAVEDAD Y SALTO CORTO
+
         float escala = escalaBase;
 
         if (velocidadY < 0f)
+        {
             escala *= multiplicadorCaida;
+        }
         else if (velocidadY > 0f && !mantieneSalto)
+        {
             escala *= multiplicadorSaltoCorto;
+        }
 
         rb.gravityScale = escala;
 
@@ -154,10 +185,12 @@ public class BanditController : MonoBehaviour
         );
     }
 
+    // DETECTAR SUELO
 
     bool DetectarSuelo()
     {
-        // Justo después de saltar no cuenta como suelo, para no repetir el salto
+        // Evitar detectar suelo inmediatamente
+        // despues de saltar
         if (contadorSaltoReciente > 0f)
             return false;
 
@@ -165,7 +198,10 @@ public class BanditController : MonoBehaviour
 
         Vector2 centro = groundCheck != null
             ? (Vector2)groundCheck.position
-            : new Vector2(limites.center.x, limites.min.y);
+            : new Vector2(
+                limites.center.x,
+                limites.min.y
+            );
 
         Vector2 tamano = new Vector2(
             limites.size.x * 0.9f,
@@ -173,27 +209,50 @@ public class BanditController : MonoBehaviour
         );
 
         Collider2D[] toques =
-            Physics2D.OverlapBoxAll(centro, tamano, 0f, capaSuelo);
+            Physics2D.OverlapBoxAll(
+                centro,
+                tamano,
+                0f,
+                capaSuelo
+            );
 
         foreach (Collider2D toque in toques)
         {
-            if (toque != col && !toque.isTrigger && EsSuelo(toque))
+            if (toque != col &&
+                !toque.isTrigger &&
+                EsSuelo(toque))
+            {
                 return true;
+            }
         }
 
         return false;
     }
 
+    // VERIFICAR SUPERFICIES VALIDAS
+
     bool EsSuelo(Collider2D toque)
     {
+        // 1. Comprobar suelo normal y cajas
         foreach (string tagSuelo in tagsSuelo)
         {
             if (toque.CompareTag(tagSuelo))
                 return true;
         }
 
+        // 2. NUEVO: comprobar agua congelada
+        waterscripts agua =
+            toque.GetComponent<waterscripts>();
+
+        if (agua != null && agua.EstaCongelada)
+        {
+            return true;
+        }
+
         return false;
     }
+
+    // DETECCION DE ESCALERAS
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -209,27 +268,34 @@ public class BanditController : MonoBehaviour
     {
         if (other.CompareTag("Ladder"))
         {
-            escalerasTocando = Mathf.Max(0, escalerasTocando - 1);
+            escalerasTocando =
+                Mathf.Max(0, escalerasTocando - 1);
 
             if (escalerasTocando > 0)
                 return;
 
             enEscalera = false;
 
-            // Si sale subiendo, impulso para llegar a la plataforma de arriba
+            // Impulso al salir por arriba
             if (movimientoY > 0f)
             {
                 rb.linearVelocity = new Vector2(
                     rb.linearVelocity.x,
-                    Mathf.Sqrt(2f * CalcularGravedad() * alturaSalidaEscalera)
+                    Mathf.Sqrt(
+                        2f * CalcularGravedad() *
+                        alturaSalidaEscalera
+                    )
                 );
             }
         }
     }
 
+    // VISUALIZAR DETECTOR DE SUELO
+
     void OnDrawGizmosSelected()
     {
-        Collider2D colisionador = GetComponent<Collider2D>();
+        Collider2D colisionador =
+            GetComponent<Collider2D>();
 
         if (colisionador == null)
             return;
@@ -238,12 +304,21 @@ public class BanditController : MonoBehaviour
 
         Vector3 centro = groundCheck != null
             ? groundCheck.position
-            : new Vector3(limites.center.x, limites.min.y, 0f);
+            : new Vector3(
+                limites.center.x,
+                limites.min.y,
+                0f
+            );
 
         Gizmos.color = Color.green;
+
         Gizmos.DrawWireCube(
             centro,
-            new Vector3(limites.size.x * 0.9f, altoCheckSuelo, 0f)
+            new Vector3(
+                limites.size.x * 0.9f,
+                altoCheckSuelo,
+                0f
+            )
         );
     }
 
