@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -120,5 +121,10 @@ public class BanditController : MonoBehaviour
         {
             enSuelo = false;
         }
+    }
+
+    void prueba()
+    {
+        Console.WriteLine("Game over");
     }
 }

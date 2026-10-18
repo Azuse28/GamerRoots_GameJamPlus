@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BanditController
   velocidad: 35
-  fuerzaSalto: 20
+  fuerzaSalto: 23
   velocidadEscalera: 15
 --- !u!114 &173547798
 MonoBehaviour:
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WizardController
   velocidad: 35
-  fuerzaSalto: 20
+  fuerzaSalto: 23
 --- !u!50 &1535543091
 Rigidbody2D:
   serializedVersion: 5
