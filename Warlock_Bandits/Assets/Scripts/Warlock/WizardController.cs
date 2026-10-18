@@ -5,13 +5,12 @@ using UnityEngine.InputSystem;
 
 public class WizardController : MonoBehaviour
 {
+    [Header("Movimiento")]
     [SerializeField] private float velocidad = 8f;
     [SerializeField] private float velocidadEscalera = 5f;
-    // Al salir por arriba de la escalera sube esta altura extra para alcanzar la plataforma
     [SerializeField] private float alturaSalidaEscalera = 4f;
 
     [Header("Salto")]
-    // La gravedad y la fuerza del salto se calculan a partir de estos dos valores
     [SerializeField] private float alturaSalto = 11f;
     [SerializeField] private float tiempoHastaCima = 0.38f;
     [SerializeField] private float multiplicadorCaida = 1.8f;
@@ -21,15 +20,22 @@ public class WizardController : MonoBehaviour
     [SerializeField] private float jumpBuffer = 0.12f;
 
     [Header("Suelo")]
-    // Opcional: si no se asigna, se usa la base del collider
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask capaSuelo = ~0;
     [SerializeField] private float altoCheckSuelo = 0.3f;
-    // Tags sobre los que se puede estar de pie (el suelo y las cajas)
     [SerializeField] private string[] tagsSuelo = { "Ground", "box" };
+
+    [Header("Animaciones")]
+    [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    private const string ANIM_IDLE = "Warlock_idle";
+    private const string ANIM_WALK = "Warlock_walk";
+    private const string ANIM_CAST = "Warlock_cast";
 
     private Rigidbody2D rb;
     private Collider2D col;
+
     private float movimientoX;
     private float movimientoY;
 
@@ -39,13 +45,27 @@ public class WizardController : MonoBehaviour
     private float contadorSaltoReciente;
     private bool enSuelo = false;
     private bool enEscalera = false;
-    // Cuenta los triggers de escalera tocados, por si hay varios solapados
     private int escalerasTocando = 0;
+
+    // Control de animaciones
+    private bool estaCasteando = false;
+    private string animacionActual = "";
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
+
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
+
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    void Start()
+    {
+        CambiarAnimacion(ANIM_IDLE);
     }
 
     void Update()
@@ -60,11 +80,25 @@ public class WizardController : MonoBehaviour
         if (Keyboard.current == null)
             return;
 
+        // MOVIMIENTO HORIZONTAL
+
         if (Keyboard.current.leftArrowKey.isPressed)
             movimientoX = -1f;
 
         if (Keyboard.current.rightArrowKey.isPressed)
             movimientoX = 1f;
+
+        // VOLTEAR SPRITE SEGUN DIRECCION
+
+        if (spriteRenderer != null)
+        {
+            if (movimientoX < 0f)
+                spriteRenderer.flipX = true;
+            else if (movimientoX > 0f)
+                spriteRenderer.flipX = false;
+        }
+
+        // ESCALERAS Y SALTO
 
         if (enEscalera)
         {
@@ -79,19 +113,92 @@ public class WizardController : MonoBehaviour
             if (Keyboard.current.upArrowKey.wasPressedThisFrame)
                 contadorBuffer = jumpBuffer;
 
-            mantieneSalto = Keyboard.current.upArrowKey.isPressed;
+            mantieneSalto =
+                Keyboard.current.upArrowKey.isPressed;
+        }
+
+        // INICIAR ANIMACION DE CAST
+
+        if (Keyboard.current.iKey.wasPressedThisFrame &&
+            !estaCasteando)
+        {
+            estaCasteando = true;
+            CambiarAnimacion(ANIM_CAST);
+        }
+
+        // CONTROLAR ANIMACIONES
+
+        ActualizarAnimaciones();
+    }
+
+    // CAMBIAR ANIMACION SIN REINICIARLA
+
+    void CambiarAnimacion(string nombre)
+    {
+        if (animator == null)
+            return;
+
+        if (animacionActual == nombre)
+            return;
+
+        animacionActual = nombre;
+        animator.Play(nombre, 0, 0f);
+    }
+
+    // ACTUALIZAR IDLE, WALK Y CAST
+
+    void ActualizarAnimaciones()
+    {
+        if (animator == null)
+            return;
+
+        if (estaCasteando)
+        {
+            AnimatorStateInfo estado =
+                animator.GetCurrentAnimatorStateInfo(0);
+
+            // Esperar a que Cast termine
+            if (estado.IsName(ANIM_CAST) &&
+                estado.normalizedTime >= 1f)
+            {
+                estaCasteando = false;
+                animacionActual = "";
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        bool caminando =
+            movimientoX != 0f || movimientoY != 0f;
+
+        if (caminando)
+        {
+            CambiarAnimacion(ANIM_WALK);
+        }
+        else
+        {
+            CambiarAnimacion(ANIM_IDLE);
         }
     }
 
+    // CALCULO DE GRAVEDAD
+
     float CalcularGravedad()
     {
-        return 2f * alturaSalto / (tiempoHastaCima * tiempoHastaCima);
+        return 2f * alturaSalto /
+            (tiempoHastaCima * tiempoHastaCima);
     }
+
+    // MOVIMIENTO FISICO
 
     void FixedUpdate()
     {
         float gravedad = CalcularGravedad();
-        float escalaBase = gravedad / Mathf.Abs(Physics2D.gravity.y);
+
+        float escalaBase =
+            gravedad / Mathf.Abs(Physics2D.gravity.y);
 
         if (enEscalera)
         {
@@ -101,6 +208,7 @@ public class WizardController : MonoBehaviour
                 movimientoX * velocidad,
                 movimientoY * velocidadEscalera
             );
+
             return;
         }
 
@@ -118,19 +226,26 @@ public class WizardController : MonoBehaviour
 
         if (contadorBuffer > 0f && contadorCoyote > 0f)
         {
-            velocidadY = 2f * alturaSalto / tiempoHastaCima;
+            velocidadY =
+                2f * alturaSalto / tiempoHastaCima;
+
             contadorBuffer = 0f;
             contadorCoyote = 0f;
             contadorSaltoReciente = 0.1f;
         }
 
-        // Cae más rápido de lo que sube, y si suelta la tecla el salto se corta
+        // CAIDA Y SALTO CORTO
+
         float escala = escalaBase;
 
         if (velocidadY < 0f)
+        {
             escala *= multiplicadorCaida;
+        }
         else if (velocidadY > 0f && !mantieneSalto)
+        {
             escala *= multiplicadorSaltoCorto;
+        }
 
         rb.gravityScale = escala;
 
@@ -140,9 +255,10 @@ public class WizardController : MonoBehaviour
         );
     }
 
+    // DETECCION DE SUELO
+
     bool DetectarSuelo()
     {
-        // Justo después de saltar no cuenta como suelo, para no repetir el salto
         if (contadorSaltoReciente > 0f)
             return false;
 
@@ -150,7 +266,10 @@ public class WizardController : MonoBehaviour
 
         Vector2 centro = groundCheck != null
             ? (Vector2)groundCheck.position
-            : new Vector2(limites.center.x, limites.min.y);
+            : new Vector2(
+                limites.center.x,
+                limites.min.y
+            );
 
         Vector2 tamano = new Vector2(
             limites.size.x * 0.9f,
@@ -158,12 +277,21 @@ public class WizardController : MonoBehaviour
         );
 
         Collider2D[] toques =
-            Physics2D.OverlapBoxAll(centro, tamano, 0f, capaSuelo);
+            Physics2D.OverlapBoxAll(
+                centro,
+                tamano,
+                0f,
+                capaSuelo
+            );
 
         foreach (Collider2D toque in toques)
         {
-            if (toque != col && !toque.isTrigger && EsSuelo(toque))
+            if (toque != col &&
+                !toque.isTrigger &&
+                EsSuelo(toque))
+            {
                 return true;
+            }
         }
 
         return false;
@@ -180,6 +308,8 @@ public class WizardController : MonoBehaviour
         return false;
     }
 
+    // DETECCION DE ESCALERAS
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Ladder"))
@@ -194,27 +324,34 @@ public class WizardController : MonoBehaviour
     {
         if (other.CompareTag("Ladder"))
         {
-            escalerasTocando = Mathf.Max(0, escalerasTocando - 1);
+            escalerasTocando =
+                Mathf.Max(0, escalerasTocando - 1);
 
             if (escalerasTocando > 0)
                 return;
 
             enEscalera = false;
 
-            // Si sale subiendo, impulso para llegar a la plataforma de arriba
+            // Impulso al salir por arriba
             if (movimientoY > 0f)
             {
                 rb.linearVelocity = new Vector2(
                     rb.linearVelocity.x,
-                    Mathf.Sqrt(2f * CalcularGravedad() * alturaSalidaEscalera)
+                    Mathf.Sqrt(
+                        2f * CalcularGravedad() *
+                        alturaSalidaEscalera
+                    )
                 );
             }
         }
     }
 
+    // VISUALIZAR DETECTOR DE SUELO
+
     void OnDrawGizmosSelected()
     {
-        Collider2D colisionador = GetComponent<Collider2D>();
+        Collider2D colisionador =
+            GetComponent<Collider2D>();
 
         if (colisionador == null)
             return;
@@ -223,12 +360,21 @@ public class WizardController : MonoBehaviour
 
         Vector3 centro = groundCheck != null
             ? groundCheck.position
-            : new Vector3(limites.center.x, limites.min.y, 0f);
+            : new Vector3(
+                limites.center.x,
+                limites.min.y,
+                0f
+            );
 
         Gizmos.color = Color.green;
+
         Gizmos.DrawWireCube(
             centro,
-            new Vector3(limites.size.x * 0.9f, altoCheckSuelo, 0f)
+            new Vector3(
+                limites.size.x * 0.9f,
+                altoCheckSuelo,
+                0f
+            )
         );
     }
 
