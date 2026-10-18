@@ -292,8 +292,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BanditController
   velocidad: 35
-  fuerzaSalto: 23
   velocidadEscalera: 15
+  alturaSalidaEscalera: 4
+  alturaSalto: 11
+  tiempoHastaCima: 0.38
+  multiplicadorCaida: 1.8
+  multiplicadorSaltoCorto: 2.5
+  velocidadMaxCaida: 65
+  coyoteTime: 0.1
+  jumpBuffer: 0.12
+  groundCheck: {fileID: 0}
+  capaSuelo:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  altoCheckSuelo: 0.3
+  tagsSuelo:
+  - Ground
+  - box
 --- !u!114 &173547798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,7 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WizardController
   velocidad: 35
-  fuerzaSalto: 23
+  fuerzaSalto: 12
   velocidadEscalera: 15
 --- !u!50 &1535543091
 Rigidbody2D:

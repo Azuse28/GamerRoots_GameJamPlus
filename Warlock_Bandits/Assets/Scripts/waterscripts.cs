@@ -1,10 +1,13 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(TilemapCollider2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
 public class waterscripts : MonoBehaviour
 {
     public enum EstadoAgua
@@ -23,15 +26,18 @@ public class waterscripts : MonoBehaviour
     private const string TAG_AGUA = "BadWater";
 
     private TilemapCollider2D colliderAgua;
+    private CapsuleCollider2D rangoHabilidad;
     private Coroutine temporizador;
 
-    private HashSet<GameObject> personajesEliminados =
+    private readonly HashSet<GameObject> personajesEliminados =
         new HashSet<GameObject>();
+
+    private readonly HashSet<WizardController> magosEnRango =
+        new HashSet<WizardController>();
 
     private void Awake()
     {
-        // Verificar que el objeto sea el agua
-        if (gameObject.tag != TAG_AGUA)
+        if (!CompareTag(TAG_AGUA))
         {
             Debug.LogError(
                 "El objeto Water debe tener el Tag: " + TAG_AGUA
@@ -41,37 +47,92 @@ public class waterscripts : MonoBehaviour
             return;
         }
 
-        // Obtener el collider del Tilemap
         colliderAgua = GetComponent<TilemapCollider2D>();
+        rangoHabilidad = GetComponent<CapsuleCollider2D>();
 
-        // El agua debe detectar contacto sin bloquear
+        // Ambos detectan contacto sin bloquear
         colliderAgua.isTrigger = true;
+        rangoHabilidad.isTrigger = true;
 
-        // Evitar que otro collider genere zonas de muerte
         if (GetComponent<BoxCollider2D>() != null)
         {
             Debug.LogError(
                 "Water todavía tiene un Box Collider 2D. " +
-                "Elimínalo y utiliza solamente Tilemap Collider 2D."
+                "Elimínalo."
             );
 
             enabled = false;
         }
     }
 
+    private void Update()
+    {
+        if (Keyboard.current == null)
+            return;
+
+        // Solo activar cuando se presiona I
+        if (!Keyboard.current.iKey.wasPressedThisFrame)
+            return;
+
+        // Comprobar si hay un Warlock dentro del rango
+        foreach (WizardController wizard in magosEnRango)
+        {
+            if (wizard != null)
+            {
+                Congelar();
+                break;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        VerificarPersonaje(other);
+        VerificarContacto(other);
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        VerificarContacto(other);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        WizardController wizard =
+            other.GetComponentInParent<WizardController>();
+
+        if (wizard != null)
+        {
+            // Solo quitarlo si ya no está dentro del Capsule
+            if (!rangoHabilidad.IsTouching(other))
+            {
+                magosEnRango.Remove(wizard);
+            }
+        }
+    }
+
+    private void VerificarContacto(Collider2D other)
+    {
+        WizardController wizard =
+            other.GetComponentInParent<WizardController>();
+
+        // Detectar proximidad al agua
+        if (wizard != null)
+        {
+            if (rangoHabilidad.IsTouching(other))
+            {
+                magosEnRango.Add(wizard);
+            }
+        }
+
+        // Solo el Tilemap activa la muerte
+        if (!colliderAgua.IsTouching(other))
+            return;
+
         VerificarPersonaje(other);
     }
 
     private void VerificarPersonaje(Collider2D other)
     {
-        // Detectar a Bandit
         BanditController bandit =
             other.GetComponentInParent<BanditController>();
 
@@ -85,7 +146,6 @@ public class waterscripts : MonoBehaviour
             return;
         }
 
-        // Detectar a Warlock
         WizardController wizard =
             other.GetComponentInParent<WizardController>();
 
