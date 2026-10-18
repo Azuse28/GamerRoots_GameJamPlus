@@ -29,6 +29,15 @@ public class WizardController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    // NUEVO: SONIDO DE SALTO
+    [Header("Sonidos")]
+    [SerializeField] private AudioClip sonidoSalto;
+
+    [Range(0f, 1f)]
+    [SerializeField] private float volumenSalto = 0.15f;
+
+    private AudioSource audioSource;
+
     private const string ANIM_IDLE = "Warlock_idle";
     private const string ANIM_WALK = "Warlock_walk";
     private const string ANIM_CAST = "Warlock_cast";
@@ -61,6 +70,9 @@ public class WizardController : MonoBehaviour
 
         if (spriteRenderer == null)
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        // NUEVO: Obtener AudioSource del Warlock
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -224,6 +236,8 @@ public class WizardController : MonoBehaviour
 
         float velocidadY = rb.linearVelocity.y;
 
+        // EJECUTAR SALTO
+
         if (contadorBuffer > 0f && contadorCoyote > 0f)
         {
             velocidadY =
@@ -232,6 +246,15 @@ public class WizardController : MonoBehaviour
             contadorBuffer = 0f;
             contadorCoyote = 0f;
             contadorSaltoReciente = 0.1f;
+
+            // NUEVO: REPRODUCIR SONIDO DE SALTO
+            if (audioSource != null && sonidoSalto != null)
+            {
+                audioSource.PlayOneShot(
+                    sonidoSalto,
+                    volumenSalto
+                );
+            }
         }
 
         // CAIDA Y SALTO CORTO
