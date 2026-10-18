@@ -3594,7 +3594,7 @@ GameObject:
   - component: {fileID: 1009459801}
   - component: {fileID: 1009459800}
   m_Layer: 8
-  m_Name: Tilemap (1)
+  m_Name: Water
   m_TagString: BadWater
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
