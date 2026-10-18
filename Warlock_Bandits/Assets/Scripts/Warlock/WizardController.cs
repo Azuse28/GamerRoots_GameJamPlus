@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,56 +7,103 @@ public class WizardController : MonoBehaviour
 {
     [SerializeField] private float velocidad = 8f;
     [SerializeField] private float fuerzaSalto = 12f;
+    [SerializeField] private float velocidadEscalera = 5f;
 
     private Rigidbody2D rb;
     private float movimientoX;
+    private float movimientoY;
+    private float gravedadOriginal;
+
     private bool saltar;
     private bool enSuelo = false;
+    private bool enEscalera = false;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        gravedadOriginal = rb.gravityScale;
     }
 
     void Update()
     {
         movimientoX = 0f;
+        movimientoY = 0f;
 
         if (Keyboard.current == null)
             return;
 
         if (Keyboard.current.jKey.isPressed)
-        {
             movimientoX = -1f;
-        }
 
         if (Keyboard.current.lKey.isPressed)
-        {
             movimientoX = 1f;
-        }
 
-        if (Keyboard.current.iKey.wasPressedThisFrame && enSuelo)
+        if (enEscalera)
         {
-            saltar = true;
-            enSuelo = false;
+            if (Keyboard.current.iKey.isPressed)
+                movimientoY = 1f;
+
+            if (Keyboard.current.kKey.isPressed)
+                movimientoY = -1f;
+        }
+        else
+        {
+            if (Keyboard.current.iKey.wasPressedThisFrame
+                && enSuelo)
+            {
+                saltar = true;
+                enSuelo = false;
+            }
         }
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(
-            movimientoX * velocidad,
-            rb.linearVelocity.y
-        );
-
-        if (saltar)
+        if (enEscalera)
         {
+            rb.gravityScale = 0f;
+
             rb.linearVelocity = new Vector2(
-                rb.linearVelocity.x,
-                fuerzaSalto
+                movimientoX * velocidad,
+                movimientoY * velocidadEscalera
+            );
+        }
+        else
+        {
+            rb.gravityScale = gravedadOriginal;
+
+            rb.linearVelocity = new Vector2(
+                movimientoX * velocidad,
+                rb.linearVelocity.y
             );
 
+            if (saltar)
+            {
+                rb.linearVelocity = new Vector2(
+                    rb.linearVelocity.x,
+                    fuerzaSalto
+                );
+
+                saltar = false;
+            }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Ladder"))
+        {
+            enEscalera = true;
             saltar = false;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Ladder"))
+        {
+            enEscalera = false;
+            rb.gravityScale = gravedadOriginal;
         }
     }
 
@@ -73,5 +121,10 @@ public class WizardController : MonoBehaviour
         {
             enSuelo = false;
         }
+    }
+
+    void prueba()
+    {
+        Console.WriteLine("Game over");
     }
 }

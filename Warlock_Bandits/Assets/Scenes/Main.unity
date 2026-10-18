@@ -149,7 +149,7 @@ Transform:
   m_GameObject: {fileID: 173547792}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1602.6, y: 76.6, z: 0}
+  m_LocalPosition: {x: -1588.8, y: 72.4, z: 0}
   m_LocalScale: {x: 25, y: 25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -460,7 +460,7 @@ Transform:
   m_GameObject: {fileID: 1535543088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1579.5, y: 74.7, z: 0}
+  m_LocalPosition: {x: -1596.9, y: 70.3, z: 0}
   m_LocalScale: {x: 11, y: 11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -481,6 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WizardController
   velocidad: 35
   fuerzaSalto: 23
+  velocidadEscalera: 5
 --- !u!50 &1535543091
 Rigidbody2D:
   serializedVersion: 5
