@@ -261,7 +261,7 @@ public class BanditController : MonoBehaviour
             {
                 audioSource.PlayOneShot(
                     sonidoSalto,
-                    0.15f
+                    1.0f
                 );
             }
         }
