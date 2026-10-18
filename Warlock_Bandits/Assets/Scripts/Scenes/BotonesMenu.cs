@@ -2,47 +2,38 @@ using UnityEngine;
 
 public class BotonesMenu : MonoBehaviour
 {
-    // Se conecta a BotonNewGame
+    // Para NEW GAME o REINTENTAR
     public void BotonJugar()
     {
         if (DirectorEscenas.Instancia != null)
-        {
             DirectorEscenas.Instancia.IrAJugar();
-        }
-        else
-        {
-            Debug.LogWarning("¡Ojo! Debes darle Play desde la escena 'Director' para cambiar de escenas.");
-        }
     }
 
-    // Se conecta a BotonCredits
+    // Para CONTINUE dentro de la escena de Pausa
+    public void BotonReanudarPausa()
+    {
+        if (DirectorEscenas.Instancia != null)
+            DirectorEscenas.Instancia.ReanudarJuego();
+    }
+
+    // Para CREDITS
     public void BotonCreditos()
     {
         if (DirectorEscenas.Instancia != null)
-        {
             DirectorEscenas.Instancia.IrACreditos();
-        }
-        else
-        {
-            Debug.LogWarning("¡Ojo! Debes darle Play desde la escena 'Director' para ir a Créditos.");
-        }
     }
 
-    // Por si ponen un botón físico de volver o al terminar una escena
+    // Para ir al Menú Principal (desde Pausa, Game Over o Win)
     public void BotonVolverAlMenu()
     {
         if (DirectorEscenas.Instancia != null)
-        {
             DirectorEscenas.Instancia.IrAlMenu();
-        }
     }
 
-    // Se conecta a BotonExit
+    // Para EXIT (Cerrar el juego)
     public void BotonSalir()
     {
         if (DirectorEscenas.Instancia != null)
-        {
             DirectorEscenas.Instancia.SalirDelJuego();
-        }
     }
 }

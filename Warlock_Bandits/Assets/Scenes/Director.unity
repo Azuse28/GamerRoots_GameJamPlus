@@ -149,8 +149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DirectorEscenas
   escenaMenu: MainMenu
-  escenaJuego: Level0
+  escenaMain: Main
+  escenaNivel: Level0
   escenaCreditos: CreditScene
+  duracionCreditos: 23
 --- !u!4 &1784821732
 Transform:
   m_ObjectHideFlags: 0
