@@ -556,6 +556,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02010f7760b3b974889903f8f7f5f2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Iluminacion
+  brilloInicial: 0.2
+  brilloFinal: 0.85
+  duracionAclarado: 3
+  brilloMinimo: 0.7
+  brilloMaximo: 1
+  velocidad: 2
+  duracionTransicion: 1
 --- !u!114 &771908916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,6 +575,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02010f7760b3b974889903f8f7f5f2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  brilloInicial: 0.2
+  brilloFinal: 0.85
+  duracionAclarado: 3
+  brilloMinimo: 0.7
+  brilloMaximo: 1
+  velocidad: 2
+  duracionTransicion: 1
 --- !u!1 &828991891
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +840,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GameRoots
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c8db09a16b260094e9957efeba3b7127, type: 2}
+  m_sharedMaterial: {fileID: -3491281526517319901, guid: c8db09a16b260094e9957efeba3b7127, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
