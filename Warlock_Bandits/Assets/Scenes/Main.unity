@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BanditController
   velocidad: 35
-  fuerzaSalto: 23
+  fuerzaSalto: 20
   velocidadEscalera: 15
 --- !u!114 &173547798
 MonoBehaviour:
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WizardController
   velocidad: 35
-  fuerzaSalto: 23
+  fuerzaSalto: 20
 --- !u!50 &1535543091
 Rigidbody2D:
   serializedVersion: 5
@@ -555,7 +555,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 65
+    OrthographicSize: 66.7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -651,7 +651,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 65
+  orthographic size: 66.7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

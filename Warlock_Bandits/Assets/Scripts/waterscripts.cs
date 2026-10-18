@@ -1,5 +1,3 @@
-
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +20,7 @@ public class waterscripts : MonoBehaviour
     [Header("Evento de muerte")]
     [SerializeField] private UnityEvent alMorirPersonaje;
 
-    private const string TAG_AGUA = "Bad Waters";
+    private const string TAG_AGUA = "BadWater";
 
     private TilemapCollider2D colliderAgua;
     private Coroutine temporizador;

@@ -9,6 +9,7 @@ TagManager:
   - BadWater
   - Ground
   - Ladder
+  - box
   layers:
   - Default
   - TransparentFX
