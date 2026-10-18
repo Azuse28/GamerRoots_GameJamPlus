@@ -311,6 +311,9 @@ MonoBehaviour:
   - Ground
   - box
   sonidoSalto: {fileID: 8300000, guid: 29a3e1c5b3d424e4e81499e06aaf406d, type: 3}
+  sonidoCaminar: {fileID: 8300000, guid: 970660fd90885e94783c5da7597d1c4e, type: 3}
+  volumenCaminar: 0.2
+  intervaloPasos: 0.3
 --- !u!114 &173547798
 MonoBehaviour:
   m_ObjectHideFlags: 0

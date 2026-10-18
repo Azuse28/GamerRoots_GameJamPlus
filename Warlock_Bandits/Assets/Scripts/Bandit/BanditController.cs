@@ -1,4 +1,3 @@
-
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -36,7 +35,12 @@ public class BanditController : MonoBehaviour
     [Header("Sonidos")]
     [SerializeField] private AudioClip sonidoSalto;
 
+    // SONIDO DE CAMINAR
+    [SerializeField] private AudioClip sonidoCaminar;
+    [SerializeField] private float volumenCaminar = 0.2f;
+
     private AudioSource audioSource;
+    private AudioSource audioPasos;
 
     private Rigidbody2D rb;
     private Collider2D col;
@@ -59,7 +63,17 @@ public class BanditController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<Collider2D>();
 
+        // AudioSource original para el salto
         audioSource = GetComponent<AudioSource>();
+
+        // AudioSource independiente para caminar
+        audioPasos = gameObject.AddComponent<AudioSource>();
+
+        audioPasos.clip = sonidoCaminar;
+        audioPasos.loop = true;
+        audioPasos.playOnAwake = false;
+        audioPasos.volume = volumenCaminar;
+        audioPasos.spatialBlend = 0f;
     }
 
     void Update()
@@ -126,6 +140,9 @@ public class BanditController : MonoBehaviour
                 movimientoY * velocidadEscalera
             );
 
+            // Detener pasos mientras está en escalera
+            DetenerSonidoCaminar();
+
             return;
         }
 
@@ -153,6 +170,10 @@ public class BanditController : MonoBehaviour
             contadorBuffer = 0f;
             contadorCoyote = 0f;
             contadorSaltoReciente = 0.1f;
+
+            // Detener los pasos al saltar
+            enSuelo = false;
+            DetenerSonidoCaminar();
 
             // SONIDO DE SALTO
             if (audioSource != null && sonidoSalto != null)
@@ -183,6 +204,46 @@ public class BanditController : MonoBehaviour
             movimientoX * velocidad,
             Mathf.Max(velocidadY, -velocidadMaxCaida)
         );
+
+        // CONTROLAR SONIDO DE CAMINAR
+        ReproducirSonidoCaminar();
+    }
+
+    // SONIDO DE CAMINAR
+
+    void ReproducirSonidoCaminar()
+    {
+        bool estaCaminando =
+            enSuelo &&
+            !enEscalera &&
+            Mathf.Abs(movimientoX) > 0.01f &&
+            Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+
+        if (estaCaminando)
+        {
+            // Reproducir únicamente si no está sonando
+            if (audioPasos != null &&
+                audioPasos.clip != null &&
+                !audioPasos.isPlaying)
+            {
+                audioPasos.Play();
+            }
+        }
+        else
+        {
+            // Detener inmediatamente cuando deja de caminar
+            DetenerSonidoCaminar();
+        }
+    }
+
+    // DETENER SONIDO DE CAMINAR
+
+    void DetenerSonidoCaminar()
+    {
+        if (audioPasos != null && audioPasos.isPlaying)
+        {
+            audioPasos.Stop();
+        }
     }
 
     // DETECTAR SUELO
@@ -240,7 +301,7 @@ public class BanditController : MonoBehaviour
                 return true;
         }
 
-        // 2. NUEVO: comprobar agua congelada
+        // 2. Comprobar agua congelada
         waterscripts agua =
             toque.GetComponent<waterscripts>();
 
@@ -261,6 +322,9 @@ public class BanditController : MonoBehaviour
             escalerasTocando++;
             enEscalera = true;
             contadorBuffer = 0f;
+
+            // Detener sonido al entrar en escalera
+            DetenerSonidoCaminar();
         }
     }
 
