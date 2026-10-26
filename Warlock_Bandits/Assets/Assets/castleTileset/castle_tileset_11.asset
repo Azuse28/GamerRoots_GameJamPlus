@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: castle_tileset_11
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
   m_Sprite: {fileID: -2949689564083292540, guid: 29628b5437ed54047893951da1e8cbb6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.023584902, g: 0.77032685, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
