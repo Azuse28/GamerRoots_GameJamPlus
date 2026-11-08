@@ -11,6 +11,9 @@ TagManager:
   - Ladder
   - box
   - Wall
+  - bound
+  - bound_bandit
+  - bound_warlock
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,16 @@ public class WizardController : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.1f;
     [SerializeField] private float jumpBuffer = 0.12f;
 
+    [Header("Rebote en paredes")]
+    [SerializeField] private bool permitirWallJump = true;
+    [SerializeField] private string tagParedRebote = "bound";
+    [SerializeField] private string tagParedReboteExclusivo = "bound_warlock";
+    [Min(0.01f)] [SerializeField] private float distanciaDeteccionPared = 0.12f;
+    [Min(0f)] [SerializeField] private float velocidadReboteHorizontal = 35f;
+    [Min(0f)] [SerializeField] private float velocidadReboteVertical = 50f;
+    [Min(0f)] [SerializeField] private float impulsoVerticalExtraRebote = 12f;
+    [Min(0f)] [SerializeField] private float tiempoBloqueoRebote = 0.12f;
+
     [Header("Suelo")]
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask capaSuelo = ~0;
@@ -28,6 +38,10 @@ public class WizardController : MonoBehaviour
     [Header("Animaciones")]
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
+
+    [Header("Hechizo")]
+    [SerializeField] private GameObject prefabHechizo;
+    [SerializeField] private Transform puntoLanzamiento;
 
     [Header("Sonidos")]
     [SerializeField] private AudioClip sonidoSalto;
@@ -58,13 +72,35 @@ public class WizardController : MonoBehaviour
     private float contadorCoyote;
     private float contadorBuffer;
     private float contadorSaltoReciente;
+    private float contadorBloqueoRebote;
+    private float direccionRebote;
     private bool enSuelo = false;
     private bool enEscalera = false;
     private int escalerasTocando = 0;
 
     // Control de animaciones
     private bool estaCasteando = false;
+    private bool muriendoPorLiana;
     private string animacionActual = "";
+
+    public static event Action<WizardController> MagiaUsada;
+
+    public void MorirPorLiana()
+    {
+        if (muriendoPorLiana) return;
+        muriendoPorLiana = true;
+
+        Personaje personaje = GetComponentInParent<Personaje>();
+        if (personaje != null)
+        {
+            personaje.Morir();
+            return;
+        }
+
+        Destroy(gameObject);
+        if (DirectorEscenas.Instancia != null)
+            DirectorEscenas.Instancia.IrAGameOver();
+    }
 
     void Awake()
     {
@@ -152,8 +188,18 @@ public class WizardController : MonoBehaviour
         if (Keyboard.current.iKey.wasPressedThisFrame &&
             !estaCasteando)
         {
+            MagiaUsada?.Invoke(this);
             estaCasteando = true;
             CambiarAnimacion(ANIM_CAST);
+        }
+
+        if (Keyboard.current.oKey.wasPressedThisFrame &&
+            !estaCasteando)
+        {
+            MagiaUsada?.Invoke(this);
+            estaCasteando = true;
+            CambiarAnimacion(ANIM_CAST);
+            LanzarHechizo();
         }
 
         // CONTROLAR ANIMACIONES
@@ -219,6 +265,22 @@ public class WizardController : MonoBehaviour
         }
     }
 
+    void LanzarHechizo()
+    {
+        if (prefabHechizo == null) return;
+
+        Vector3 origen = puntoLanzamiento != null
+            ? puntoLanzamiento.position
+            : transform.position;
+        float direccion = spriteRenderer != null && spriteRenderer.flipX
+            ? -1f : 1f;
+
+        GameObject objeto = Instantiate(prefabHechizo, origen, Quaternion.identity);
+        HechizoWarlock hechizo = objeto.GetComponent<HechizoWarlock>();
+        if (hechizo != null)
+            hechizo.Inicializar(direccion, gameObject);
+    }
+
     // CALCULO DE GRAVEDAD
 
     float CalcularGravedad()
@@ -240,6 +302,7 @@ public class WizardController : MonoBehaviour
 
         if (enEscalera)
         {
+            contadorBloqueoRebote = 0f;
             rb.gravityScale = 0f;
 
             rb.linearVelocity = new Vector2(
@@ -253,6 +316,9 @@ public class WizardController : MonoBehaviour
             return;
         }
 
+        contadorBloqueoRebote = Mathf.Max(0f,
+            contadorBloqueoRebote - Time.fixedDeltaTime);
+
         if (contadorSaltoReciente > 0f)
             contadorSaltoReciente -= Time.fixedDeltaTime;
 
@@ -263,11 +329,33 @@ public class WizardController : MonoBehaviour
         else
             contadorCoyote -= Time.fixedDeltaTime;
 
+        if (enSuelo)
+            contadorBloqueoRebote = 0f;
+
         float velocidadY = rb.linearVelocity.y;
+        float velocidadX = movimientoX * velocidad;
+        float direccionSalida = 0f;
+        bool puedeRebotar = permitirWallJump && !enSuelo &&
+            DetectarParedRebote(out direccionSalida);
 
         // EJECUTAR SALTO
 
-        if (contadorBuffer > 0f && contadorCoyote > 0f)
+        if (contadorBuffer > 0f && puedeRebotar)
+        {
+            direccionRebote = direccionSalida;
+            velocidadX = direccionRebote * velocidadReboteHorizontal;
+            velocidadY = velocidadReboteVertical + impulsoVerticalExtraRebote;
+            contadorBloqueoRebote = tiempoBloqueoRebote;
+            contadorBuffer = 0f;
+            contadorCoyote = 0f;
+            contadorSaltoReciente = 0.1f;
+            enSuelo = false;
+            DetenerSonidoCaminar();
+
+            if (audioSource != null && sonidoSalto != null)
+                audioSource.PlayOneShot(sonidoSalto, volumenSalto);
+        }
+        else if (contadorBuffer > 0f && contadorCoyote > 0f)
         {
             velocidadY =
                 2f * alturaSalto / tiempoHastaCima;
@@ -290,6 +378,9 @@ public class WizardController : MonoBehaviour
             }
         }
 
+        if (contadorBloqueoRebote > 0f)
+            velocidadX = direccionRebote * velocidadReboteHorizontal;
+
         // CAIDA Y SALTO CORTO
 
         float escala = escalaBase;
@@ -306,7 +397,7 @@ public class WizardController : MonoBehaviour
         rb.gravityScale = escala;
 
         rb.linearVelocity = new Vector2(
-            movimientoX * velocidad,
+            velocidadX,
             Mathf.Max(velocidadY, -velocidadMaxCaida)
         );
 
@@ -401,6 +492,61 @@ public class WizardController : MonoBehaviour
         foreach (string tagSuelo in tagsSuelo)
         {
             if (toque.CompareTag(tagSuelo))
+                return true;
+        }
+
+        return false;
+    }
+
+    bool DetectarParedRebote(out float direccionSalida)
+    {
+        direccionSalida = 0f;
+        Bounds limites = col.bounds;
+        float anchoSonda = distanciaDeteccionPared;
+        Vector2 tamanoSonda = new Vector2(anchoSonda, limites.size.y * 0.8f);
+        Vector2 centroIzquierda = new Vector2(
+            limites.min.x - anchoSonda * 0.5f + 0.02f,
+            limites.center.y);
+        Vector2 centroDerecha = new Vector2(
+            limites.max.x + anchoSonda * 0.5f - 0.02f,
+            limites.center.y);
+
+        bool paredIzquierda = HayParedRebote(centroIzquierda, tamanoSonda);
+        bool paredDerecha = HayParedRebote(centroDerecha, tamanoSonda);
+        if (paredIzquierda == paredDerecha)
+            return false;
+
+        direccionSalida = paredIzquierda ? 1f : -1f;
+        return true;
+    }
+
+    bool HayParedRebote(Vector2 centro, Vector2 tamano)
+    {
+        Collider2D[] cercanos = Physics2D.OverlapBoxAll(
+            centro, tamano, 0f, ~0);
+
+        foreach (Collider2D cercano in cercanos)
+        {
+            if (cercano == col || cercano.isTrigger ||
+                cercano.attachedRigidbody == rb ||
+                cercano.GetComponentInParent<Personaje>() != null ||
+                cercano.GetComponentInParent<waterscripts>() != null ||
+                !TieneTagParedRebote(cercano))
+                continue;
+
+            return true;
+        }
+
+        return false;
+    }
+
+    bool TieneTagParedRebote(Collider2D superficie)
+    {
+        for (Transform actual = superficie.transform; actual != null; actual = actual.parent)
+        {
+            if (actual.CompareTag(tagParedRebote) ||
+                (!string.IsNullOrEmpty(tagParedReboteExclusivo) &&
+                actual.CompareTag(tagParedReboteExclusivo)))
                 return true;
         }
 
